@@ -1,4 +1,217 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Blog</title><link>https://iuwu98005.github.io/</link><description>Recent content on My Blog</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Wed, 11 Jun 2025 17:43:32 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Archlinux Dailycheck</title><link>https://iuwu98005.github.io/posts/archlinux-dailycheck/</link><pubDate>Wed, 11 Jun 2025 17:43:32 +0800</pubDate><guid>https://iuwu98005.github.io/posts/archlinux-dailycheck/</guid><description>&lt;h3 id="1更新系统核心任务">&lt;strong>1、更新系统（核心任务）&lt;/strong>&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Blog</title><link>https://iuwu98005.github.io/</link><description>Recent content on My Blog</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Wed, 11 Jun 2025 17:50:06 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Archlinux Keybind</title><link>https://iuwu98005.github.io/posts/archlinux-keybind/</link><pubDate>Wed, 11 Jun 2025 17:50:06 +0800</pubDate><guid>https://iuwu98005.github.io/posts/archlinux-keybind/</guid><description>&lt;p>项目地址: &lt;a href="https://github.com/Liu-WeiHu/hyprdots/tree/current">https://github.com/Liu-WeiHu/hyprdots/tree/current&lt;/a>&lt;/p>
+&lt;h2 id="keybindings">Keybindings&lt;/h2>
+&lt;!-- raw HTML omitted -->
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align: left">Keys&lt;/th>
+&lt;th style="text-align: left">Action&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Q&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->F4&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Close focused window&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Del&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Kill Hyprland session&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->W&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Toggle the window between focus and float&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->G&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Toggle the window between focus and group&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Enter&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Toggle the window between focus and fullscreen&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->L&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch lock screen&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->F&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Toggle pin on focused window&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Backspace&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch logout menu&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Esc&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Toggle waybar&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->T&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch terminal emulator (kitty)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->E&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch file manager (dolphin)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->C&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch text editor (vscode)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->F&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch web browser (firefox)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Esc&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch system monitor (htop/btop or fallback to top)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->A&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch application launcher (rofi)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Tab&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch window switcher (rofi)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->E&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch file explorer (rofi)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->F10&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Toggle audio mute&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->F11&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Decrease volume&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->F12&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Increase volume&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->P&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Partial screenshot capture&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->P&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Partial screenshot capture (frozen screen)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->P&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Monitor screenshot capture&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->PrtScn&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">All monitors screenshot capture&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->G&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Disable hypr effects for gamemode&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->→&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->←&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Cycle wallpaper&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->↑&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↓&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Cycle waybar mode&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->R&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch wallbash mode select menu (rofi)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->T&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch theme select menu (rofi)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->A&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch style select menu (rofi)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->W&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch wallpaper select menu (rofi)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->V&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Launch clipboard (rofi)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->K&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Switch keyboard layout&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->←&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->→&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↑&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↓&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Move window focus&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Tab&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Change window focus&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->[0-9]&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Switch workspaces&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->←&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->→&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Switch workspaces to a relative workspace&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->↓&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Move to the first empty workspace&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->←&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->→&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↑&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↓&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Resize windows&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->[0-9]&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Move focused window to a relative workspace&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->←&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->→&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↑&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↓&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Move focused window around the current workspace&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->MouseScroll&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Scroll through existing workspaces&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->LeftClick&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Z&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Move focused window&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->RightClick&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->X&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Resize focused window&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->S&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Move/Switch to special workspace (scratchpad)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->S&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Toggle to special workspace&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->J&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Toggle focused window split&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->[0-9]&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Move focused window to a workspace silently&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->H&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Move between grouped windows backward&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->L&lt;!-- raw HTML omitted -->&lt;/td>
+&lt;td style="text-align: left">Move between grouped windows forward&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;!-- raw HTML omitted --></description></item><item><title>Archlinux Dailycheck</title><link>https://iuwu98005.github.io/posts/archlinux-dailycheck/</link><pubDate>Wed, 11 Jun 2025 17:43:32 +0800</pubDate><guid>https://iuwu98005.github.io/posts/archlinux-dailycheck/</guid><description>&lt;h3 id="1更新系统核心任务">&lt;strong>1、更新系统（核心任务）&lt;/strong>&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Syu &lt;span style="color:#75715e"># 同步仓库并升级所有软件包&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="2清理软件包缓存节省磁盘空间">&lt;strong>2、清理软件包缓存（节省磁盘空间）&lt;/strong>&lt;/h3>
 &lt;pre tabindex="0">&lt;code>sudo pacman -Sc # 删除已卸载软件的旧版本缓存
