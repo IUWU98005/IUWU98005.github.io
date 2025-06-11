@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Blog</title><link>https://iuwu98005.github.io/</link><description>Recent content on My Blog</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Wed, 11 Jun 2025 10:15:07 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo + GitHub Pages 自动部署博客指南</title><link>https://iuwu98005.github.io/posts/my-first-post/</link><pubDate>Wed, 11 Jun 2025 10:15:07 +0800</pubDate><guid>https://iuwu98005.github.io/posts/my-first-post/</guid><description>&lt;h2 id="-环境准备">📦 环境准备&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Blog</title><link>https://iuwu98005.github.io/</link><description>Recent content on My Blog</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Wed, 11 Jun 2025 17:43:32 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Archlinux Dailycheck</title><link>https://iuwu98005.github.io/posts/archlinux-dailycheck/</link><pubDate>Wed, 11 Jun 2025 17:43:32 +0800</pubDate><guid>https://iuwu98005.github.io/posts/archlinux-dailycheck/</guid><description>&lt;h3 id="1更新系统核心任务">&lt;strong>1、更新系统（核心任务）&lt;/strong>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Syu &lt;span style="color:#75715e"># 同步仓库并升级所有软件包&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="2清理软件包缓存节省磁盘空间">&lt;strong>2、清理软件包缓存（节省磁盘空间）&lt;/strong>&lt;/h3>
+&lt;pre tabindex="0">&lt;code>sudo pacman -Sc # 删除已卸载软件的旧版本缓存
+sudo pacman -Scc # 清空所有缓存（谨慎使用，可能导致无法降级软件）
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>替代工具：
+&lt;pre tabindex="0">&lt;code>paccache -r # 使用 `pacman-contrib` 中的工具保留最近3个版本
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-检查系统日志排查潜在问题">&lt;strong>3. 检查系统日志（排查潜在问题）&lt;/strong>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>journalctl -p &lt;span style="color:#ae81ff">3&lt;/span> -xb &lt;span style="color:#75715e"># 查看优先级为 ERROR 及以上的日志&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>journalctl --disk-usage &lt;span style="color:#75715e"># 检查日志占用的磁盘空间&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="4-备份重要数据防止意外丢失">&lt;strong>4. 备份重要数据（防止意外丢失）&lt;/strong>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>手动备份&lt;/strong>：
+&lt;pre tabindex="0">&lt;code>rsync -avh --progress /path/to/source /path/to/backup
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;li>&lt;strong>自动备份&lt;/strong>：
+&lt;ul>
+&lt;li>&lt;code>timeshift&lt;/code>（系统快照）&lt;/li>
+&lt;li>&lt;code>borgbackup&lt;/code>（去重加密备份）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-检查磁盘健康">&lt;strong>5. 检查磁盘健康&lt;/strong>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo smartctl -a /dev/sda &lt;span style="color:#75715e"># 查看硬盘SMART状态（需安装 `smartmontools`）&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo df -h &lt;span style="color:#75715e"># 查看磁盘空间使用情况&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo du -sh ~/Downloads &lt;span style="color:#75715e"># 检查指定目录占用空间&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="6-监控系统资源">&lt;strong>6. 监控系统资源&lt;/strong>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>htop &lt;span style="color:#75715e"># 实时查看CPU、内存、进程状态（需安装 `htop`）&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nvtop &lt;span style="color:#75715e"># 监控NVIDIA GPU状态（需安装 `nvtop`）&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>iotop &lt;span style="color:#75715e"># 查看磁盘I/O使用情况（需安装 `iotop`）&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="7-检查安全性与异常登录">&lt;strong>7. 检查安全性与异常登录&lt;/strong>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>last -a &lt;span style="color:#75715e"># 查看最近登录记录&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo netstat -tulpn | grep LISTEN &lt;span style="color:#75715e"># 检查开放端口&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo fail2ban-client status &lt;span style="color:#75715e"># 查看入侵防护状态（需安装 `fail2ban`）&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="8-维护配置文件">&lt;strong>8. 维护配置文件&lt;/strong>&lt;/h3>
+&lt;ul>
+&lt;li>清理用户历史文件：
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> rm ~/.bash_history &lt;span style="color:#75715e"># 慎用！建议使用 `history -c` 仅清理内存中的记录&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>删除临时文件：
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rm -rf ~/.cache/* &lt;span style="color:#75715e"># 清理用户缓存&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="注意事项">&lt;strong>注意事项&lt;/strong>&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>滚动更新的风险&lt;/strong>：Arch Linux 是滚动发行版，每日更新可能导致依赖冲突，建议：&lt;/p></description></item><item><title>Hugo + GitHub Pages 自动部署博客指南</title><link>https://iuwu98005.github.io/posts/my-first-post/</link><pubDate>Wed, 11 Jun 2025 10:15:07 +0800</pubDate><guid>https://iuwu98005.github.io/posts/my-first-post/</guid><description>&lt;h2 id="-环境准备">📦 环境准备&lt;/h2>
 &lt;p>确保本地安装了以下工具：&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://gohugo.io/getting-started/installing/">Hugo&lt;/a>（建议安装 Hugo extended 版本）&lt;/li>
