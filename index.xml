@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Blog</title><link>https://iuwu98005.github.io/</link><description>Recent content on My Blog</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Fri, 13 Jun 2025 18:13:59 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>构建简单的 AI Agent 实战教程</title><link>https://iuwu98005.github.io/posts/ai-agent/</link><pubDate>Fri, 13 Jun 2025 18:13:59 +0800</pubDate><guid>https://iuwu98005.github.io/posts/ai-agent/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
 &lt;p>本项目展示如何使用 Python 构建一个简单的文件系统助手程序。该助手可以理解用户的文本输入，调用指定工具函数操作文件，并通过 Gemini 模型进行任务处理。&lt;/p>
+&lt;p>demo地址：&lt;a href="https://github.com/IUWU98005/mai-agent">https://github.com/IUWU98005/mai-agent&lt;/a>&lt;/p>
 &lt;h2 id="项目结构">项目结构&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── __init__.py
