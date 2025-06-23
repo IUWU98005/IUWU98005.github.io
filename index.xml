@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Blog</title><link>https://iuwu98005.github.io/</link><description>Recent content on My Blog</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Fri, 13 Jun 2025 18:13:59 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>构建简单的 AI Agent 实战教程</title><link>https://iuwu98005.github.io/posts/ai-agent/</link><pubDate>Fri, 13 Jun 2025 18:13:59 +0800</pubDate><guid>https://iuwu98005.github.io/posts/ai-agent/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Blog</title><link>https://iuwu98005.github.io/</link><description>Recent content on My Blog</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Mon, 23 Jun 2025 16:06:16 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Cherry Studio 配置本地 MCP 服务</title><link>https://iuwu98005.github.io/posts/01_cherrystudio_mcp/</link><pubDate>Mon, 23 Jun 2025 16:06:16 +0800</pubDate><guid>https://iuwu98005.github.io/posts/01_cherrystudio_mcp/</guid><description>&lt;p>demo地址：&lt;a href="https://github.com/IUWU98005/mai-agent">https://github.com/IUWU98005/mai-agent&lt;/a>&lt;/p>
+&lt;h2 id="-简介">📌 简介&lt;/h2>
+&lt;p>本文档将指导你如何将自定义的 MCP 服务（如你在 main.py 中编写的基于 FastMCP 的服务）集成到 Cherry Studio 中，实现本地调试和调用。&lt;/p>
+&lt;p>Cherry Studio 是一个支持多种 Agent 和工具链插件的开发环境，而 MCP（Modular Command Protocol）是 Cherry Studio 与外部 AI 工具或脚本通信的主要协议。&lt;/p>
+&lt;h2 id="-环境要求">🛠️ 环境要求&lt;/h2>
+&lt;pre>&lt;code>- Python 3.10+
+- 已安装 Cherry Studio
+- MCP 服务依赖：
+- pydantic_ai
+- fastmcp
+- dotenv
+- psutil、platform 等标准/常用库
+&lt;/code>&lt;/pre>
+&lt;h2 id="-项目结构">📁 项目结构&lt;/h2>
+&lt;p>确保你的项目大致如下所示：&lt;/p>
+&lt;pre>&lt;code>project_root/
+│
+├── main.py # MCP 服务主程序
+├── tools.py # 自定义工具函数
+├── .env # 可选的环境变量文件
+└── cases/ # 供工具函数使用的目录
+&lt;/code>&lt;/pre>
+&lt;h2 id="mcp-服务核心代码mainpy">MCP 服务核心代码（main.py）&lt;/h2>
+&lt;pre>&lt;code>from pydantic_ai.agent import AgentRunResult
+from pydantic_ai.models.gemini import GeminiModel
+from pydantic_ai import Agent
+from mcp.server.fastmcp import FastMCP
+from dotenv import load_dotenv
+from typing_extensions import NoReturn
+import tools
+load_dotenv()
+mcp = FastMCP(name=&amp;quot;base&amp;quot;)
+@mcp.tool(tools.get_host_info())
+def host():
+return &amp;quot;&amp;quot;
+def agent_run() -&amp;gt; NoReturn:
+model = GeminiModel(&amp;quot;gemini-2.0-flash&amp;quot;)
+agent = Agent(
+model=model,
+system_prompt=&amp;quot;You are a experienced programmer&amp;quot;,
+tools=[tools.read_file, tools.list_files, tools.rename_file],
+)
+history: list = []
+while True:
+user_input: str = input(&amp;quot;Input: &amp;quot;)
+resp: AgentRunResult[str] = agent.run_sync(user_input, message_history=history)
+history = list(resp.all_messages())
+print(resp.output)
+def main() -&amp;gt; None:
+mcp.run(transport=&amp;quot;stdio&amp;quot;)
+if __name__ == &amp;quot;__main__&amp;quot;:
+main()
+&lt;/code>&lt;/pre>
+&lt;h2 id="通过-json-配置文件添加-mcp-服务器">通过 json 配置文件添加 MCP 服务器&lt;/h2>
+&lt;p>在 CherryStudio 添加 MCP 服务器, 并选择 &lt;code>从 Json 导入&lt;/code>, 配置 json 文件:&lt;/p></description></item><item><title>构建简单的 AI Agent 实战教程</title><link>https://iuwu98005.github.io/posts/ai-agent/</link><pubDate>Fri, 13 Jun 2025 18:13:59 +0800</pubDate><guid>https://iuwu98005.github.io/posts/ai-agent/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
 &lt;p>本项目展示如何使用 Python 构建一个简单的文件系统助手程序。该助手可以理解用户的文本输入，调用指定工具函数操作文件，并通过 Gemini 模型进行任务处理。&lt;/p>
 &lt;p>demo地址：&lt;a href="https://github.com/IUWU98005/mai-agent">https://github.com/IUWU98005/mai-agent&lt;/a>&lt;/p>
 &lt;h2 id="项目结构">项目结构&lt;/h2>
