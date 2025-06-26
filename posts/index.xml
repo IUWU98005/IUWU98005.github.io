@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Blog</title><link>https://iuwu98005.github.io/posts/</link><description>Recent content in Posts on My Blog</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Mon, 23 Jun 2025 16:06:16 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Cherry Studio 配置本地 MCP 服务</title><link>https://iuwu98005.github.io/posts/01_cherrystudio_mcp/</link><pubDate>Mon, 23 Jun 2025 16:06:16 +0800</pubDate><guid>https://iuwu98005.github.io/posts/01_cherrystudio_mcp/</guid><description>&lt;p>demo地址：&lt;a href="https://github.com/IUWU98005/mai-agent">https://github.com/IUWU98005/mai-agent&lt;/a>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Blog</title><link>https://iuwu98005.github.io/posts/</link><description>Recent content in Posts on My Blog</description><generator>Hugo -- 0.147.9</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Thu, 26 Jun 2025 14:36:07 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Python 多线程编程</title><link>https://iuwu98005.github.io/posts/250626-python-thread/</link><pubDate>Thu, 26 Jun 2025 14:36:07 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250626-python-thread/</guid><description>&lt;h2 id="基本概念">基本概念&lt;/h2>
+&lt;p>多任务中的并发和并行&lt;/p>
+&lt;ul>
+&lt;li>并发: 一段时间内交替执行任务&lt;/li>
+&lt;li>并行: 一段时间内同时执行多个任务&lt;/li>
+&lt;/ul>
+&lt;h2 id="进程">进程&lt;/h2>
+&lt;p>python 中可以通过多进程来实现多任务.&lt;/p>
+&lt;h3 id="进程的概念">进程的概念&lt;/h3>
+&lt;p>进程 (Process) 是操作系统资源分配和调度的基本单位.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># main.py&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">foo1&lt;/span>():&lt;span style="color:#f92672">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">foo2&lt;/span>():&lt;span style="color:#f92672">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo1()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo2()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在运行 &lt;code>.py&lt;/code> 文件时, 操作系统会创建一个进程, 依次运行 &lt;code>foo1&lt;/code> 和 &lt;code>foo2&lt;/code> 两个方法.&lt;/p>
+&lt;h3 id="多进程">多进程&lt;/h3>
+&lt;p>&lt;code>main.py&lt;/code> 运行后会创建一个进程, 此时如果再次创建一个进程, 即为子进程. 我们让主进程运行 &lt;code>foo1&lt;/code>, 让子进程来运行 &lt;code>foo2&lt;/code>即可提升代码运行的效率.&lt;/p>
+&lt;h3 id="进程的创建步骤">进程的创建步骤&lt;/h3>
+&lt;p>1.导入进程包&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> multiprocessing
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>2.创建进程对象&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>mp &lt;span style="color:#f92672">=&lt;/span> multiprocessing&lt;span style="color:#f92672">.&lt;/span>Process()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>Process()&lt;/code> 方法主要有3个参数:&lt;/p>
+&lt;ul>
+&lt;li>target: 执行的目标函数名(方法名), 如 &lt;code>foo2&lt;/code>&lt;/li>
+&lt;li>name: 进程名, 一般不用设置&lt;/li>
+&lt;li>group: 进程组, 当前为 &lt;code>None&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>3.启动进程&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>mp&lt;span style="color:#f92672">.&lt;/span>start()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="进程执行带有参数的任务">进程执行带有参数的任务&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>args&lt;/code> 以元组方式传参&lt;/li>
+&lt;li>&lt;code>kwargs&lt;/code> 以字典方式传参&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">foo1&lt;/span>(argument:int):&lt;span style="color:#f92672">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">foo2&lt;/span>(argument:int):&lt;span style="color:#f92672">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo1_process &lt;span style="color:#f92672">=&lt;/span> multiprocessing&lt;span style="color:#f92672">.&lt;/span>Process(target&lt;span style="color:#f92672">=&lt;/span>foo1, args&lt;span style="color:#f92672">=&lt;/span>(&lt;span style="color:#ae81ff">3&lt;/span>,))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo1_process&lt;span style="color:#f92672">.&lt;/span>start()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo2_process &lt;span style="color:#f92672">=&lt;/span> multiprocessing&lt;span style="color:#f92672">.&lt;/span>Process(target&lt;span style="color:#f92672">=&lt;/span>foo2, kwargs&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#e6db74">&amp;#34;argument&amp;#34;&lt;/span>, &lt;span style="color:#ae81ff">3&lt;/span>})
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo2_process&lt;span style="color:#f92672">.&lt;/span>start()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="获取进程编号">获取进程编号&lt;/h3>
+&lt;p>当程序进程数量越来越多时, 为了更好地对进程进行管理, 就需要知道每个进程的编号&lt;/p></description></item><item><title>在 Cherry Studio 配置本地 MCP 服务</title><link>https://iuwu98005.github.io/posts/01_cherrystudio_mcp/</link><pubDate>Mon, 23 Jun 2025 16:06:16 +0800</pubDate><guid>https://iuwu98005.github.io/posts/01_cherrystudio_mcp/</guid><description>&lt;p>demo地址：&lt;a href="https://github.com/IUWU98005/mai-agent">https://github.com/IUWU98005/mai-agent&lt;/a>&lt;/p>
 &lt;h2 id="-简介">📌 简介&lt;/h2>
 &lt;p>本文档将指导你如何将自定义的 MCP 服务（如你在 main.py 中编写的基于 FastMCP 的服务）集成到 Cherry Studio 中，实现本地调试和调用。&lt;/p>
 &lt;p>Cherry Studio 是一个支持多种 Agent 和工具链插件的开发环境，而 MCP（Modular Command Protocol）是 Cherry Studio 与外部 AI 工具或脚本通信的主要协议。&lt;/p>
