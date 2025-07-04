@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Blog</title><link>https://iuwu98005.github.io/posts/</link><description>Recent content in Posts on My Blog</description><generator>Hugo -- 0.147.9</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Thu, 26 Jun 2025 14:36:07 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Python 多线程编程</title><link>https://iuwu98005.github.io/posts/250626-python-thread/</link><pubDate>Thu, 26 Jun 2025 14:36:07 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250626-python-thread/</guid><description>&lt;h2 id="基本概念">基本概念&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Blog</title><link>https://iuwu98005.github.io/posts/</link><description>Recent content in Posts on My Blog</description><generator>Hugo -- 0.147.9</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Wed, 02 Jul 2025 17:53:00 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>git 学习记录</title><link>https://iuwu98005.github.io/posts/250703_gitflow/</link><pubDate>Wed, 02 Jul 2025 17:53:00 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250703_gitflow/</guid><description>&lt;h2 id="gitflow-是什么">GitFlow 是什么?&lt;/h2>
+&lt;p>GitFlow 简单来说, 就是使用 git 进行版本控制的一套规范.&lt;/p>
+&lt;p>根据 GitFlow 的建议, 主要的分支分为 &lt;code>master&lt;/code>, &lt;code>hotfix&lt;/code>, &lt;code>dev&lt;/code>, &lt;code>release&lt;/code> 和 &lt;code>feat&lt;/code> 这 5 种分支.&lt;/p>
+&lt;p>下图来自 &lt;code>why-need-git-flow&lt;/code>:&lt;/p>
+&lt;p>&lt;img alt="alt text" loading="lazy" src="image.png">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>master&lt;/code> : 主干分支, 用于正式发布的分支, 需要由专人严格审核测试后的 &lt;code>release&lt;/code> / &lt;code>hotfix&lt;/code> 分支才可以合并到该分支.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>hotfix&lt;/code> : 用于热修复, 当 &lt;code>master&lt;/code> 出现紧急 bug 时, 就需要基于 &lt;code>master&lt;/code> 临时创建一个分支进行修复, 修复测试完成后, 合并到 &lt;code>master&lt;/code> 和 &lt;code>dev&lt;/code> 分支, 修复完成后删除 &lt;code>hotfix&lt;/code> 分支.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>dev&lt;/code> : 开发分支, 在 &lt;code>master&lt;/code> 分支基础上创建而来, 是功能开发的基础分支. 一般不可在这条分支上直接开发, 需要新建一个 &lt;code>feat&lt;/code> 分支, 再进行开发.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>feat&lt;/code>: 功能分支, 基于 &lt;code>master&lt;/code> 分支, 不同的开发人员负责不同的 &lt;code>feat&lt;/code> 分支, 开发测试完成后, 提交 &lt;code>PR(Pull Request)&lt;/code> 到 remote, 由专人审核, 审核通过后合并到 &lt;code>dev&lt;/code> 分支.&lt;/p></description></item><item><title>Pandas Tutorial</title><link>https://iuwu98005.github.io/posts/250702_pandas/</link><pubDate>Wed, 02 Jul 2025 16:56:44 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250702_pandas/</guid><description>&lt;h2 id="pandas的安装与导入">Pandas的安装与导入&lt;/h2>
+&lt;p>在终端输入以下指令安装 &lt;code>pandas&lt;/code> 库&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install pandas
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果是使用 &lt;code>vscode&lt;/code> 进行开发, 你可能需要额外安装 &lt;code>openpyxl&lt;/code> 库:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install openpyxl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装完成后在代码中导入:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> pandas &lt;span style="color:#66d9ef">as&lt;/span> pd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="pandas-读取数据的方式">Pandas 读取数据的方式&lt;/h2>
+&lt;p>Pandas 主要通过以下三种方式从不同来源读取数据:&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>pd.read_csv()&lt;/code>&lt;/li>
+&lt;li>&lt;code>pd.read_excel()&lt;/code>&lt;/li>
+&lt;li>&lt;code>pd.read_sql()&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h2 id="pandas-的数据类型">Pandas 的数据类型&lt;/h2>
+&lt;p>Pandas 的数据类型有 &lt;code>DataFrame&lt;/code> 和 &lt;code>Series&lt;/code>
+一般来说, 查询单行或者单列的数据, 返回的结果为 Series
+查询多行多列的数据, 返回的结果为 DataFrame&lt;/p>
+&lt;h2 id="pandas-查询数据的方式">Pandas 查询数据的方式&lt;/h2>
+&lt;p>Pandas 查询数据的 5 种方式: 1. &lt;code>df.loc&lt;/code> 2. &lt;code>df.iloc&lt;/code> 3. &lt;code>df.where&lt;/code> 4. &lt;code>df.query&lt;/code>.
+在这几种方法中, &lt;code>df.loc&lt;/code> 可以兼顾查询和覆写的功能, 具体使用方法如下:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>df &lt;span style="color:#f92672">=&lt;/span> pd&lt;span style="color:#f92672">.&lt;/span>read_csv(your_csv_path)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>df&lt;span style="color:#f92672">.&lt;/span>loc[:, &lt;span style="color:#e6db74">&amp;#34;[column1]&amp;#34;&lt;/span>] &lt;span style="color:#f92672">=&lt;/span> df[&lt;span style="color:#e6db74">&amp;#34;column1&amp;#34;&lt;/span>]&lt;span style="color:#f92672">.&lt;/span>str&lt;span style="color:#f92672">.&lt;/span>replace(&lt;span style="color:#e6db74">&amp;#34;origin_str_part&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;target_str_part&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>上面这段代码的效果是, 查询 column1 这一整列(&lt;code>:&lt;/code> 表示查询所有行), 同时将该行的 &lt;code>origin_str_part&lt;/code> 全部替换为 &lt;code>target_str_part&lt;/code>.&lt;/p></description></item><item><title>Python 多线程编程</title><link>https://iuwu98005.github.io/posts/250626-python-thread/</link><pubDate>Thu, 26 Jun 2025 14:36:07 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250626-python-thread/</guid><description>&lt;h2 id="基本概念">基本概念&lt;/h2>
 &lt;p>多任务中的并发和并行&lt;/p>
 &lt;ul>
 &lt;li>并发: 一段时间内交替执行任务&lt;/li>
