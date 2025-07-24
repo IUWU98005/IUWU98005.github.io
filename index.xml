@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Blog</title><link>https://iuwu98005.github.io/</link><description>Recent content on My Blog</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Thu, 24 Jul 2025 09:53:31 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>基于 LangChain 的智能体 - Dota2 玩家比赛行为锐评</title><link>https://iuwu98005.github.io/posts/250724-ai-agent/</link><pubDate>Thu, 24 Jul 2025 09:53:31 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250724-ai-agent/</guid><description>&lt;h1 id="基于-langchain-的智能体---dota2-玩家比赛行为锐评">基于 LangChain 的智能体 - Dota2 玩家比赛行为锐评&lt;/h1>
-&lt;h2 id="项目概述">项目概述&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Blog</title><link>https://iuwu98005.github.io/</link><description>Recent content on My Blog</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Thu, 24 Jul 2025 09:53:31 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>基于 LangChain 的智能体 - Dota2 玩家比赛行为锐评</title><link>https://iuwu98005.github.io/posts/250724-ai-agent/</link><pubDate>Thu, 24 Jul 2025 09:53:31 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250724-ai-agent/</guid><description>&lt;h2 id="项目概述">项目概述&lt;/h2>
 &lt;p>本项目是一个基于 LangChain 框架开发的智能体系统，专门用于分析和评价 Dota2 玩家在特定比赛中的表现。系统通过调用 STRATZ API 获取玩家比赛数据，并利用大语言模型对玩家的游戏表现进行专业、犀利的分析和评价。
-项目地址：https://github.com/IUWU98005/dota2-player-review&lt;/p>
+项目地址：&lt;a href="https://github.com/IUWU98005/dota2-player-review">https://github.com/IUWU98005/dota2-player-review&lt;/a>&lt;/p>
 &lt;h2 id="技术架构">技术架构&lt;/h2>
 &lt;h3 id="核心技术栈">核心技术栈&lt;/h3>
 &lt;ul>
@@ -13,14 +12,39 @@
 &lt;li>CloudScraper : 处理反爬虫机制&lt;/li>
 &lt;/ul>
 &lt;h3 id="项目结构">项目结构&lt;/h3>
-&lt;pre tabindex="0">&lt;code>dota2-player-review/
-├── .gitignore # Git 忽略文件配置
-├── agent.py # LangChain 智能体核心模块
-├── analysis.py # 玩家表现分析模块
-└── stratz.py # STRATZ API 数据获取工具
-&lt;/code>&lt;/pre>&lt;h2 id="核心模块详解">核心模块详解&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dota2-player-review/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── .gitignore &lt;span style="color:#75715e"># Git 忽略文件配置&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── agent.py &lt;span style="color:#75715e"># LangChain 智能体核心模块&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── analysis.py &lt;span style="color:#75715e"># 玩家表现分析模块&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>└── stratz.py &lt;span style="color:#75715e"># STRATZ API 数据获取工具&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="核心模块详解">核心模块详解&lt;/h2>
 &lt;h3 id="1-智能体模块-agentpy">1. 智能体模块 (agent.py)&lt;/h3>
-&lt;p>&lt;code>agent.py&lt;/code> 是项目的核心智能体模块，主要功能包括：&lt;/p></description></item><item><title>Git 学习记录</title><link>https://iuwu98005.github.io/posts/250703_gitflow/</link><pubDate>Fri, 04 Jul 2025 20:17:00 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250703_gitflow/</guid><description>&lt;h2 id="gitflow-是什么">GitFlow 是什么?&lt;/h2>
+&lt;p>&lt;code>agent.py&lt;/code> 是项目的核心智能体模块，主要功能包括：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> os
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> langchain.tools &lt;span style="color:#f92672">import&lt;/span> tool
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> langchain_core.messages &lt;span style="color:#f92672">import&lt;/span> HumanMessage
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> langchain_openai &lt;span style="color:#f92672">import&lt;/span> ChatOpenAI
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> langchain_community.tools &lt;span style="color:#f92672">import&lt;/span> DuckDuckGoSearchRun
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> langgraph.prebuilt &lt;span style="color:#f92672">import&lt;/span> create_react_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> dotenv &lt;span style="color:#f92672">import&lt;/span> load_dotenv
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> stratz &lt;span style="color:#f92672">import&lt;/span> get_player_data
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 模型配置&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>model &lt;span style="color:#f92672">=&lt;/span> ChatOpenAI(
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> model&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;glm-4-flash&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> openai_api_base &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;https://open.bigmodel.cn/api/paas/v4&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> api_key&lt;span style="color:#f92672">=&lt;/span>os&lt;span style="color:#f92672">.&lt;/span>getenv(&lt;span style="color:#e6db74">&amp;#34;OPENAI_API_KEY&amp;#34;&lt;/span>),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 工具集成&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tools &lt;span style="color:#f92672">=&lt;/span> [DuckDuckGoSearchRun(), get_player_data]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 手动智能体函数&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">manual_agent&lt;/span>(content: str, model: ChatOpenAI, tools: list[tool]) &lt;span style="color:#f92672">-&amp;gt;&lt;/span> dict:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> agent &lt;span style="color:#f92672">=&lt;/span> create_react_agent(model, tools)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> resp &lt;span style="color:#f92672">=&lt;/span> agent&lt;span style="color:#f92672">.&lt;/span>invoke({&lt;span style="color:#e6db74">&amp;#34;messages&amp;#34;&lt;/span>: [HumanMessage(content)]})
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> resp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>特性：&lt;/p></description></item><item><title>Git 学习记录</title><link>https://iuwu98005.github.io/posts/250703_gitflow/</link><pubDate>Fri, 04 Jul 2025 20:17:00 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250703_gitflow/</guid><description>&lt;h2 id="gitflow-是什么">GitFlow 是什么?&lt;/h2>
 &lt;p>GitFlow 简单来说, 就是使用 git 进行版本控制的一套规范.&lt;/p>
 &lt;p>根据 GitFlow 的建议, 主要的分支分为 &lt;code>master&lt;/code>, &lt;code>hotfix&lt;/code>, &lt;code>dev&lt;/code>, &lt;code>release&lt;/code> 和 &lt;code>feat&lt;/code> 这 5 种分支.&lt;/p>
 &lt;p>下图来自 &lt;code>why-need-git-flow&lt;/code>:&lt;/p>
