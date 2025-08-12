@@ -93,8 +93,9 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> __name__ &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;__main__&amp;#34;&lt;/span>:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> asyncio&lt;span style="color:#f92672">.&lt;/span>run(main())
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="asynciogather-的并发机制">&lt;code>asyncio.gather()&lt;/code> 的并发机制&lt;/h2>
-&lt;p>&lt;code>await &amp;lt;corotine&amp;gt;&lt;/code> 和 &lt;code>asyncio.gather&lt;/code>， 会将 corotine 转换为 task， 并添加到 &lt;code>event loop&lt;/code> 中。 (async 修饰的函数， 会返回一个 corotine)&lt;/p>
-&lt;p>在 asyncio 中，进行 return 操作就等价于 &lt;code>raise&lt;/code> 了一个 &lt;code>StopIteration&lt;/code>，并将返回值作为 &lt;code>StopIteration&lt;/code> 的参数。&lt;/p></description></item><item><title>基于 LangChain 的智能体 - Dota2 玩家比赛行为锐评</title><link>https://iuwu98005.github.io/posts/250724-ai-agent/</link><pubDate>Thu, 24 Jul 2025 09:53:31 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250724-ai-agent/</guid><description>&lt;h2 id="项目概述">项目概述&lt;/h2>
+&lt;blockquote>
+&lt;p>被 async 修饰的方法在被调用时，会创建一个协程对象，通过 &lt;code>await&lt;/code> 或者 &lt;code>asyncio.gather&lt;/code> 包装成 task 对象，并注册到 event loop 中。&lt;/p>&lt;/blockquote>
+&lt;p>&lt;code>await &amp;lt;corotine&amp;gt;&lt;/code> 和 &lt;code>asyncio.gather&lt;/code>， 会将 corotine 转换为 task， 并添加到 &lt;code>event loop&lt;/code> 中。 (async 修饰的函数， 会返回一个 corotine)&lt;/p></description></item><item><title>基于 LangChain 的智能体 - Dota2 玩家比赛行为锐评</title><link>https://iuwu98005.github.io/posts/250724-ai-agent/</link><pubDate>Thu, 24 Jul 2025 09:53:31 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250724-ai-agent/</guid><description>&lt;h2 id="项目概述">项目概述&lt;/h2>
 &lt;p>本项目是一个基于 LangChain 框架开发的智能体系统，专门用于分析和评价 Dota2 玩家在特定比赛中的表现。系统通过调用 STRATZ API 获取玩家比赛数据，并利用大语言模型对玩家的游戏表现进行专业、犀利的分析和评价。&lt;/p>
 &lt;p>项目地址：&lt;a href="https://github.com/IUWU98005/dota2-player-review">https://github.com/IUWU98005/dota2-player-review&lt;/a>&lt;/p>
 &lt;h2 id="技术架构">技术架构&lt;/h2>
