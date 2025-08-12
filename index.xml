@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Blog</title><link>https://iuwu98005.github.io/</link><description>Recent content on My Blog</description><generator>Hugo -- 0.148.2</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Tue, 12 Aug 2025 12:29:49 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>测试用例的设计</title><link>https://iuwu98005.github.io/posts/250812-test-case/</link><pubDate>Tue, 12 Aug 2025 12:29:49 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250812-test-case/</guid><description>&lt;h1 id="设计测试用例的方法">设计测试用例的方法&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Blog</title><link>https://iuwu98005.github.io/</link><description>Recent content on My Blog</description><generator>Hugo -- 0.148.2</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Tue, 12 Aug 2025 22:02:59 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Python Unittest 入门</title><link>https://iuwu98005.github.io/posts/250812-unittest/</link><pubDate>Tue, 12 Aug 2025 22:02:59 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250812-unittest/</guid><description>&lt;p>首先将项目的目录结构调整为如下：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-PlainText" data-lang="PlainText">&lt;span style="display:flex;">&lt;span>.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── vector # 待测试的代码
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ ├── __init__.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ └── vector.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── tests # 测试文件夹
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ ├── __init__.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ └── test_vector.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>└── main.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="待测试代码vectorpy">待测试代码（vector.py）&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Python" data-lang="Python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Vector&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">__init__&lt;/span>(self, x, y):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> isinstance(x, (int, float)) &lt;span style="color:#f92672">and&lt;/span> isinstance(y, (int, float)):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>x &lt;span style="color:#f92672">=&lt;/span> x
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>y &lt;span style="color:#f92672">=&lt;/span> y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">raise&lt;/span> &lt;span style="color:#a6e22e">ValueError&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;x and y must be numbers&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">add&lt;/span>(self, other):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> Vector(self&lt;span style="color:#f92672">.&lt;/span>x &lt;span style="color:#f92672">+&lt;/span> other&lt;span style="color:#f92672">.&lt;/span>x, self&lt;span style="color:#f92672">.&lt;/span>y &lt;span style="color:#f92672">+&lt;/span> other&lt;span style="color:#f92672">.&lt;/span>y)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="测试代码test_vectorpy">测试代码（test_vector.py）&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Python" data-lang="Python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> unittest
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> sys
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> vector &lt;span style="color:#f92672">import&lt;/span> Vector
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">TestVector&lt;/span>(unittest&lt;span style="color:#f92672">.&lt;/span>TestCase):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># 每次运行 unittest 的开始与结束打印信息&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">@classmethod&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">setUpClass&lt;/span>(cls):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(&lt;span style="color:#e6db74">&amp;#34;start&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">@classmethod&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">tearDownClass&lt;/span>(cls):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(&lt;span style="color:#e6db74">&amp;#34;end&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">test_init&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> v &lt;span style="color:#f92672">=&lt;/span> Vector(&lt;span style="color:#ae81ff">1&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>assertEqual(v&lt;span style="color:#f92672">.&lt;/span>x, &lt;span style="color:#ae81ff">1&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>assertEqual(v&lt;span style="color:#f92672">.&lt;/span>y, &lt;span style="color:#ae81ff">2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># self.assertTrue(v.x == 0)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># 测试 __init__ 的 raise error 是否正常工作&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">with&lt;/span> self&lt;span style="color:#f92672">.&lt;/span>assertRaises(&lt;span style="color:#a6e22e">ValueError&lt;/span>):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Vector(&lt;span style="color:#e6db74">&amp;#34;a&amp;#34;&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># 满足条件下跳过该测试，并提示 msg&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">@unittest.skipIf&lt;/span>(sys&lt;span style="color:#f92672">.&lt;/span>platform &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;win32&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;skip on windows&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">test_platform&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>assertEqual()&lt;/code> 在不相等时，错误信息会给出 &lt;code>v.x&lt;/code> 的值， 方便定位问题。而 &lt;code>assertTrue()&lt;/code> 只会提示 &lt;code>False != True&lt;/code>。&lt;/p></description></item><item><title>测试用例的设计</title><link>https://iuwu98005.github.io/posts/250812-test-case/</link><pubDate>Tue, 12 Aug 2025 12:29:49 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250812-test-case/</guid><description>&lt;h1 id="设计测试用例的方法">设计测试用例的方法&lt;/h1>
 &lt;p>设计测试用例的方法根据核心区别，分为从需求出发（黑盒测试），从代码出发（白盒测试）。&lt;/p>
 &lt;h2 id="一黑盒测试用例设计方法">一、黑盒测试用例设计方法&lt;/h2>
 &lt;p>根据用户需求和功能出发，不关注代码实现，可分为以下几种方法。&lt;/p>
