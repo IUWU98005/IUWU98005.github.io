@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Blog</title><link>https://iuwu98005.github.io/posts/</link><description>Recent content in Posts on My Blog</description><generator>Hugo -- 0.148.2</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Fri, 08 Aug 2025 14:40:43 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Python Asyncio</title><link>https://iuwu98005.github.io/posts/250627-python_asyncio/</link><pubDate>Fri, 08 Aug 2025 14:40:43 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250627-python_asyncio/</guid><description>&lt;h2 id="省流---使用方法">省流 - 使用方法&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Blog</title><link>https://iuwu98005.github.io/posts/</link><description>Recent content in Posts on My Blog</description><generator>Hugo -- 0.148.2</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Tue, 12 Aug 2025 12:29:49 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>测试用例的设计</title><link>https://iuwu98005.github.io/posts/250812-test-case/</link><pubDate>Tue, 12 Aug 2025 12:29:49 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250812-test-case/</guid><description>&lt;h1 id="设计测试用例的方法">设计测试用例的方法&lt;/h1>
+&lt;p>设计测试用例的方法根据核心区别，分为从需求出发（黑盒测试），从代码出发（白盒测试）。&lt;/p>
+&lt;h2 id="一黑盒测试用例设计方法">一、黑盒测试用例设计方法&lt;/h2>
+&lt;p>根据用户需求和功能出发，不关注代码实现，可分为以下几种方法。&lt;/p>
+&lt;ol>
+&lt;li>等价类划分
+&lt;ul>
+&lt;li>将输入分为有效类和无效等价类，各取一个代表值进行测试。&lt;/li>
+&lt;li>例：年龄输入框（18-60），有效类：18、24、60，无效类：&amp;lt;18，&amp;gt;60，非数字。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>边界值分析
+&lt;ul>
+&lt;li>测试输入边界以及其近邻值。&lt;/li>
+&lt;li>例：年龄输入框（18-60），边界值：18、60，近邻值：17、61。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>判定表法（Decison Table）
+&lt;ul>
+&lt;li>适用于多条件组合的场景，列出条件与结果的对应关系来生成用例。&lt;/li>
+&lt;li>例：登录功能中【用户名是否为空】【密码是否为空】-&amp;gt;【提示信息】&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>因果图法
+&lt;ul>
+&lt;li>用图形表示条件和结果的逻辑关系，然后转化为判定表。&lt;/li>
+&lt;li>常用于复杂业务的测试逻辑。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>场景法、流程法
+&lt;ul>
+&lt;li>按照用户的真实操作流程（场景）来设计测试用例，常结合业务用例图或流程图。&lt;/li>
+&lt;li>例：电商下单-支付-发货-确认收货。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>错误推测法
+&lt;ul>
+&lt;li>思路：根据经验推测出容易出错的地方。&lt;/li>
+&lt;li>例：超长字符，特殊符号，SQL注入，空格，重复提交。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="二白盒测试用例设计方法">二、白盒测试用例设计方法&lt;/h2>
+&lt;p>从代码结构出发，关注程序的执行路径。&lt;/p>
+&lt;ol>
+&lt;li>语句覆盖（Statement Coverage）
+&lt;ul>
+&lt;li>每个语句至少执行一次。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>判定覆盖、分支覆盖
+&lt;ul>
+&lt;li>每个分支（True/False）至少执行一次。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>条件覆盖
+&lt;ul>
+&lt;li>每个条件（True/False）至少执行一次。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>判定、条件覆盖
+&lt;ul>
+&lt;li>结合分支和条件的覆盖。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>路径覆盖
+&lt;ul>
+&lt;li>覆盖程序中所有可能的路径（核心逻辑模块）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h1 id="测试用例设计举例">测试用例设计举例&lt;/h1>
+&lt;p>&amp;hellip;&lt;/p></description></item><item><title>Python Asyncio</title><link>https://iuwu98005.github.io/posts/250627-python_asyncio/</link><pubDate>Fri, 08 Aug 2025 14:40:43 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250627-python_asyncio/</guid><description>&lt;h2 id="省流---使用方法">省流 - 使用方法&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Python" data-lang="Python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> asyncio
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> time
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
