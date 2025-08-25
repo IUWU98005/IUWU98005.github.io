@@ -389,8 +389,8 @@ main()
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">GEMINI_API_KEY&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">your_api_key_here&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="关键模块说明">关键模块说明&lt;/h2>
 &lt;ol>
-&lt;li>工具函数（tools.py）&lt;/li>
-&lt;/ol>
+&lt;li>
+&lt;p>工具函数（tools.py）&lt;/p>
 &lt;p>定义了程序可用的基础文件操作：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># filepath: tools.py&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -402,9 +402,9 @@ main()
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">rename_file&lt;/span>(cur_name: str, new_name: str) &lt;span style="color:#f92672">-&amp;gt;&lt;/span> str:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;重命名文件&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
-&lt;li>助手初始化（main.py）&lt;/li>
-&lt;/ol>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>助手初始化（main.py）&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> pydantic_ai.agent &lt;span style="color:#f92672">import&lt;/span> Agent
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> pydantic_ai.models.gemini &lt;span style="color:#f92672">import&lt;/span> GeminiModel
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> tools
@@ -418,20 +418,9 @@ main()
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> system_prompt&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;You are an experienced programmer.&amp;#34;&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> tools&lt;span style="color:#f92672">=&lt;/span>[tools&lt;span style="color:#f92672">.&lt;/span>read_file, tools&lt;span style="color:#f92672">.&lt;/span>list_files, tools&lt;span style="color:#f92672">.&lt;/span>rename_file],
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
-&lt;li>主程序逻辑&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#66d9ef">None&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> history &lt;span style="color:#f92672">=&lt;/span> []
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">while&lt;/span> &lt;span style="color:#66d9ef">True&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> user_input &lt;span style="color:#f92672">=&lt;/span> input(&lt;span style="color:#e6db74">&amp;#34;Input: &amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> resp &lt;span style="color:#f92672">=&lt;/span> agent&lt;span style="color:#f92672">.&lt;/span>run_sync(user_input, message_history&lt;span style="color:#f92672">=&lt;/span>history)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> history &lt;span style="color:#f92672">=&lt;/span> list(resp&lt;span style="color:#f92672">.&lt;/span>all_messages())
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(resp&lt;span style="color:#f92672">.&lt;/span>output)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="功能简介">功能简介&lt;/h2>
-&lt;ul>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;li>
-&lt;p>文件管理&lt;/p></description></item><item><title>Nginx</title><link>https://iuwu98005.github.io/posts/nginx/</link><pubDate>Wed, 11 Jun 2025 17:55:03 +0800</pubDate><guid>https://iuwu98005.github.io/posts/nginx/</guid><description>&lt;h1 id="1-nginx的安装与运行">1. Nginx的安装与运行&lt;/h1>
+&lt;p>主程序逻辑&lt;/p></description></item><item><title>Nginx</title><link>https://iuwu98005.github.io/posts/nginx/</link><pubDate>Wed, 11 Jun 2025 17:55:03 +0800</pubDate><guid>https://iuwu98005.github.io/posts/nginx/</guid><description>&lt;h1 id="1-nginx的安装与运行">1. Nginx的安装与运行&lt;/h1>
 &lt;ol>
 &lt;li>启动Nginx&lt;/li>
 &lt;/ol>
