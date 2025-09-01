@@ -1,298 +1,298 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Blog</title><link>https://iuwu98005.github.io/posts/</link><description>Recent content in Posts on My Blog</description><generator>Hugo -- 0.148.2</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Fri, 15 Aug 2025 15:53:53 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Django 学习记录</title><link>https://iuwu98005.github.io/posts/250815-django/</link><pubDate>Fri, 15 Aug 2025 15:53:53 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250815-django/</guid><description>&lt;h2 id="安装-django">安装 Django&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install django
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="django-常用命令">Django 常用命令&lt;/h2>
-&lt;p>使用语法：&lt;code>django-admin [options]&lt;/code>&lt;/p>
-&lt;ul>
-&lt;li>startproject &amp;lt;project_name&amp;gt; # 创建项目&lt;/li>
-&lt;li>startapp # 创建一个 django 应用&lt;/li>
-&lt;li>check # 校验项目完整性&lt;/li>
-&lt;li>runserver # 运行项目 e.g. python manage.py runserver&lt;/li>
-&lt;li>shell # 进入 django shell&lt;/li>
-&lt;li>test # 运行测试&lt;/li>
-&lt;/ul>
-&lt;p>数据库相关：&lt;/p>
-&lt;ul>
-&lt;li>makemigrations # 生成数据库迁移文件&lt;/li>
-&lt;li>migrate # 执行上条命令创建的迁移文件&lt;/li>
-&lt;li>dumpdata # 导出数据库数据&lt;/li>
-&lt;li>loaddata # 导入数据库数据&lt;/li>
-&lt;/ul>
-&lt;h2 id="django-项目project目录结构介绍">Django 项目（Project）目录结构介绍&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-PlainText" data-lang="PlainText">&lt;span style="display:flex;">&lt;span>.
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── manage.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── project_name
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ ├── __init__.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ ├── settings.py # 项目配置文件
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ ├── urls.py # 项目路由文件
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ ├── wsgi.py # 项目 wsgi 配置文件
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="urlspy">urls.py&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> django.urls &lt;span style="color:#f92672">import&lt;/span> path
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> . &lt;span style="color:#f92672">import&lt;/span> views
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>urlpatterns &lt;span style="color:#f92672">=&lt;/span> [
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> path(&lt;span style="color:#e6db74">&amp;#39;admin/&amp;#39;&lt;/span>, admin&lt;span style="color:#f92672">.&lt;/span>site&lt;span style="color:#f92672">.&lt;/span>urls),
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> path(&lt;span style="color:#e6db74">&amp;#39;blog/&amp;#39;&lt;/span>, include(&lt;span style="color:#e6db74">&amp;#39;blog.urls&amp;#39;&lt;/span>)),
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> path(&lt;span style="color:#e6db74">&amp;#39;&amp;#39;&lt;/span>, include(&lt;span style="color:#e6db74">&amp;#39;blog.urls&amp;#39;&lt;/span>)), &lt;span style="color:#75715e"># 首页&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>]
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="django-应用app目录结构介绍">Django 应用（app）目录结构介绍&lt;/h2>
-&lt;p>以下是一个典型的 Django 应用目录结构：&lt;/p></description></item><item><title>Python Unittest 使用方法速查</title><link>https://iuwu98005.github.io/posts/250812-unittest/</link><pubDate>Tue, 12 Aug 2025 22:02:59 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250812-unittest/</guid><description>&lt;p>首先将项目的目录结构调整为如下：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-PlainText" data-lang="PlainText">&lt;span style="display:flex;">&lt;span>.
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── vector # 待测试的代码
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ ├── __init__.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ └── vector.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── tests # 测试文件夹
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ ├── __init__.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ └── test_vector.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>└── main.py
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="待测试代码vectorpy">待测试代码（vector.py）&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Python" data-lang="Python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Vector&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">__init__&lt;/span>(self, x, y):
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> isinstance(x, (int, float)) &lt;span style="color:#f92672">and&lt;/span> isinstance(y, (int, float)):
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>x &lt;span style="color:#f92672">=&lt;/span> x
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>y &lt;span style="color:#f92672">=&lt;/span> y
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">raise&lt;/span> &lt;span style="color:#a6e22e">ValueError&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;x and y must be numbers&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">add&lt;/span>(self, other):
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> Vector(self&lt;span style="color:#f92672">.&lt;/span>x &lt;span style="color:#f92672">+&lt;/span> other&lt;span style="color:#f92672">.&lt;/span>x, self&lt;span style="color:#f92672">.&lt;/span>y &lt;span style="color:#f92672">+&lt;/span> other&lt;span style="color:#f92672">.&lt;/span>y)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="测试代码test_vectorpy">测试代码（test_vector.py）&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Python" data-lang="Python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> unittest
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> sys
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> vector &lt;span style="color:#f92672">import&lt;/span> Vector
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">TestVector&lt;/span>(unittest&lt;span style="color:#f92672">.&lt;/span>TestCase):
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># 每次运行 unittest 的开始与结束打印信息&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">@classmethod&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">setUpClass&lt;/span>(cls):
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(&lt;span style="color:#e6db74">&amp;#34;start&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">@classmethod&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">tearDownClass&lt;/span>(cls):
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(&lt;span style="color:#e6db74">&amp;#34;end&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">test_init&lt;/span>(self):
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> v &lt;span style="color:#f92672">=&lt;/span> Vector(&lt;span style="color:#ae81ff">1&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>assertEqual(v&lt;span style="color:#f92672">.&lt;/span>x, &lt;span style="color:#ae81ff">1&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>assertEqual(v&lt;span style="color:#f92672">.&lt;/span>y, &lt;span style="color:#ae81ff">2&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># self.assertTrue(v.x == 0)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># 测试 __init__ 的 raise error 是否正常工作&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">with&lt;/span> self&lt;span style="color:#f92672">.&lt;/span>assertRaises(&lt;span style="color:#a6e22e">ValueError&lt;/span>):
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Vector(&lt;span style="color:#e6db74">&amp;#34;a&amp;#34;&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># 满足条件下跳过该测试，并提示 msg&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">@unittest.skipIf&lt;/span>(sys&lt;span style="color:#f92672">.&lt;/span>platform &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;win32&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;skip on windows&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">test_platform&lt;/span>(self):
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>assertEqual()&lt;/code> 在不相等时，错误信息会给出 &lt;code>v.x&lt;/code> 的值， 方便定位问题。而 &lt;code>assertTrue()&lt;/code> 只会提示 &lt;code>False != True&lt;/code>。&lt;/p></description></item><item><title>测试用例的设计</title><link>https://iuwu98005.github.io/posts/250812-test-case/</link><pubDate>Tue, 12 Aug 2025 12:29:49 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250812-test-case/</guid><description>&lt;h2 id="设计测试用例的方法">设计测试用例的方法&lt;/h2>
-&lt;p>设计测试用例的方法根据核心区别，分为从需求出发（黑盒测试），从代码出发（白盒测试）。&lt;/p>
-&lt;h3 id="一黑盒测试用例设计方法">一、黑盒测试用例设计方法&lt;/h3>
-&lt;p>根据用户需求和功能出发，不关注代码实现，可分为以下几种方法。&lt;/p>
-&lt;ol>
-&lt;li>等价类划分
-&lt;ul>
-&lt;li>将输入分为有效类和无效等价类，各取一个代表值进行测试。&lt;/li>
-&lt;li>例：年龄输入框（18-60），有效类：18、24、60，无效类：&amp;lt;18，&amp;gt;60，非数字。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>边界值分析
-&lt;ul>
-&lt;li>测试输入边界以及其近邻值。&lt;/li>
-&lt;li>例：年龄输入框（18-60），边界值：18、60，近邻值：17、61。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>判定表法（Decison Table）
-&lt;ul>
-&lt;li>适用于多条件组合的场景，列出条件与结果的对应关系来生成用例。&lt;/li>
-&lt;li>例：登录功能中【用户名是否为空】【密码是否为空】-&amp;gt;【提示信息】&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>因果图法
-&lt;ul>
-&lt;li>用图形表示条件和结果的逻辑关系，然后转化为判定表。&lt;/li>
-&lt;li>常用于复杂业务的测试逻辑。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>场景法、流程法
-&lt;ul>
-&lt;li>按照用户的真实操作流程（场景）来设计测试用例，常结合业务用例图或流程图。&lt;/li>
-&lt;li>例：电商下单-支付-发货-确认收货。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>错误推测法
-&lt;ul>
-&lt;li>思路：根据经验推测出容易出错的地方。&lt;/li>
-&lt;li>例：超长字符，特殊符号，SQL注入，空格，重复提交。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol>
-&lt;h3 id="二白盒测试用例设计方法">二、白盒测试用例设计方法&lt;/h3>
-&lt;p>从代码结构出发，关注程序的执行路径。&lt;/p>
-&lt;ol>
-&lt;li>语句覆盖（Statement Coverage）
-&lt;ul>
-&lt;li>每个语句至少执行一次。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>判定覆盖、分支覆盖
-&lt;ul>
-&lt;li>每个分支（True/False）至少执行一次。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>条件覆盖
-&lt;ul>
-&lt;li>每个条件（True/False）至少执行一次。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>判定、条件覆盖
-&lt;ul>
-&lt;li>结合分支和条件的覆盖。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>路径覆盖
-&lt;ul>
-&lt;li>覆盖程序中所有可能的路径（核心逻辑模块）&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol>
-&lt;h3 id="测试用例设计举例">测试用例设计举例&lt;/h3>
-&lt;p>&amp;hellip;&lt;/p></description></item><item><title>Python Asyncio</title><link>https://iuwu98005.github.io/posts/250627-python_asyncio/</link><pubDate>Fri, 08 Aug 2025 14:40:43 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250627-python_asyncio/</guid><description>&lt;h2 id="省流---使用方法">省流 - 使用方法&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Python" data-lang="Python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> asyncio
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> time
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">async&lt;/span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">say_after&lt;/span>(delay: int, what: str):
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">await&lt;/span> asyncio&lt;span style="color:#f92672">.&lt;/span>sleep(delay)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">{&lt;/span>what&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> - &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>delay&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">async&lt;/span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>():
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(&lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;start at &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>time&lt;span style="color:#f92672">.&lt;/span>strftime(&lt;span style="color:#e6db74">&amp;#39;&lt;/span>&lt;span style="color:#e6db74">%X&lt;/span>&lt;span style="color:#e6db74">&amp;#39;&lt;/span>)&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ret &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> asyncio&lt;span style="color:#f92672">.&lt;/span>gather(
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> say_after(&lt;span style="color:#ae81ff">1&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;hello&amp;#34;&lt;/span>),
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> say_after(&lt;span style="color:#ae81ff">2&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;world&amp;#34;&lt;/span>),
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> )
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(ret)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(&lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;end at &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>time&lt;span style="color:#f92672">.&lt;/span>strftime(&lt;span style="color:#e6db74">&amp;#39;&lt;/span>&lt;span style="color:#e6db74">%X&lt;/span>&lt;span style="color:#e6db74">&amp;#39;&lt;/span>)&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> __name__ &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;__main__&amp;#34;&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> asyncio&lt;span style="color:#f92672">.&lt;/span>run(main())
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="asynciogather-的并发机制">&lt;code>asyncio.gather()&lt;/code> 的并发机制&lt;/h2>
-&lt;blockquote>
-&lt;p>被 async 修饰的方法在被调用时，会创建一个协程对象，通过 &lt;code>await&lt;/code> 或者 &lt;code>asyncio.gather&lt;/code> 包装成 task 对象，并注册到 event loop 中。&lt;/p>&lt;/blockquote>
-&lt;p>&lt;code>await &amp;lt;corotine&amp;gt;&lt;/code> 和 &lt;code>asyncio.gather&lt;/code>， 会将 corotine 转换为 task， 并添加到 &lt;code>event loop&lt;/code> 中。 (async 修饰的函数， 会返回一个 corotine)&lt;/p></description></item><item><title>Git 学习记录</title><link>https://iuwu98005.github.io/posts/250703_gitflow/</link><pubDate>Fri, 04 Jul 2025 20:17:00 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250703_gitflow/</guid><description>&lt;h2 id="gitflow-是什么">GitFlow 是什么?&lt;/h2>
-&lt;p>GitFlow 简单来说, 就是使用 git 进行版本控制的一套规范.&lt;/p>
-&lt;p>根据 GitFlow 的建议, 主要的分支分为 &lt;code>master&lt;/code>, &lt;code>hotfix&lt;/code>, &lt;code>dev&lt;/code>, &lt;code>release&lt;/code> 和 &lt;code>feat&lt;/code> 这 5 种分支.&lt;/p>
-&lt;p>下图来自 &lt;code>why-need-git-flow&lt;/code>:&lt;/p>
-&lt;p>&lt;img alt="alt text" loading="lazy" src="image.png">&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;code>master&lt;/code> : 主干分支, 用于正式发布的分支, 需要由专人严格审核测试后的 &lt;code>release&lt;/code> / &lt;code>hotfix&lt;/code> 分支才可以合并到该分支.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>hotfix&lt;/code> : 用于热修复, 当 &lt;code>master&lt;/code> 出现紧急 bug 时, 就需要基于 &lt;code>master&lt;/code> 临时创建一个分支进行修复, 修复测试完成后, 合并到 &lt;code>master&lt;/code> 和 &lt;code>dev&lt;/code> 分支, 修复完成后删除 &lt;code>hotfix&lt;/code> 分支.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>dev&lt;/code> : 开发分支, 在 &lt;code>master&lt;/code> 分支基础上创建而来, 是功能开发的基础分支. 一般不可在这条分支上直接开发, 需要新建一个 &lt;code>feat&lt;/code> 分支, 再进行开发.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>feat&lt;/code>: 功能分支, 基于 &lt;code>master&lt;/code> 分支, 不同的开发人员负责不同的 &lt;code>feat&lt;/code> 分支, 开发测试完成后, 提交 &lt;code>PR(Pull Request)&lt;/code> 到 remote, 由专人审核, 审核通过后合并到 &lt;code>dev&lt;/code> 分支.&lt;/p></description></item><item><title>Pandas Tutorial</title><link>https://iuwu98005.github.io/posts/250702_pandas/</link><pubDate>Wed, 02 Jul 2025 16:56:44 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250702_pandas/</guid><description>&lt;h2 id="pandas的安装与导入">Pandas的安装与导入&lt;/h2>
-&lt;p>在终端输入以下指令安装 &lt;code>pandas&lt;/code> 库&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install pandas
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果是使用 &lt;code>vscode&lt;/code> 进行开发, 你可能需要额外安装 &lt;code>openpyxl&lt;/code> 库:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install openpyxl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装完成后在代码中导入:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> pandas &lt;span style="color:#66d9ef">as&lt;/span> pd
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="pandas-读取数据的方式">Pandas 读取数据的方式&lt;/h2>
-&lt;p>Pandas 主要通过以下三种方式从不同来源读取数据:&lt;/p>
-&lt;ol>
-&lt;li>&lt;code>pd.read_csv()&lt;/code>&lt;/li>
-&lt;li>&lt;code>pd.read_excel()&lt;/code>&lt;/li>
-&lt;li>&lt;code>pd.read_sql()&lt;/code>&lt;/li>
-&lt;/ol>
-&lt;h2 id="pandas-的数据类型">Pandas 的数据类型&lt;/h2>
-&lt;p>Pandas 的数据类型有 &lt;code>DataFrame&lt;/code> 和 &lt;code>Series&lt;/code>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Blog</title><link>https://iuwu98005.github.io/posts/</link><description>Recent content in Posts on My Blog</description><generator>Hugo -- 0.149.0</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Fri, 15 Aug 2025 15:53:53 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Django 学习记录</title><link>https://iuwu98005.github.io/posts/250815-django/</link><pubDate>Fri, 15 Aug 2025 15:53:53 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250815-django/</guid><description>&lt;h2 id="安装-django"&gt;安装 Django&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install django
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="django-常用命令"&gt;Django 常用命令&lt;/h2&gt;
+&lt;p&gt;使用语法：&lt;code&gt;django-admin [options]&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;startproject &amp;lt;project_name&amp;gt; # 创建项目&lt;/li&gt;
+&lt;li&gt;startapp # 创建一个 django 应用&lt;/li&gt;
+&lt;li&gt;check # 校验项目完整性&lt;/li&gt;
+&lt;li&gt;runserver # 运行项目 e.g. python manage.py runserver&lt;/li&gt;
+&lt;li&gt;shell # 进入 django shell&lt;/li&gt;
+&lt;li&gt;test # 运行测试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数据库相关：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;makemigrations # 生成数据库迁移文件&lt;/li&gt;
+&lt;li&gt;migrate # 执行上条命令创建的迁移文件&lt;/li&gt;
+&lt;li&gt;dumpdata # 导出数据库数据&lt;/li&gt;
+&lt;li&gt;loaddata # 导入数据库数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="django-项目project目录结构介绍"&gt;Django 项目（Project）目录结构介绍&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-PlainText" data-lang="PlainText"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;├── manage.py
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;├── project_name
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ ├── __init__.py
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ ├── settings.py # 项目配置文件
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ ├── urls.py # 项目路由文件
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ ├── wsgi.py # 项目 wsgi 配置文件
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="urlspy"&gt;urls.py&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; django.urls &lt;span style="color:#f92672"&gt;import&lt;/span&gt; path
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; . &lt;span style="color:#f92672"&gt;import&lt;/span&gt; views
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;urlpatterns &lt;span style="color:#f92672"&gt;=&lt;/span&gt; [
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; path(&lt;span style="color:#e6db74"&gt;&amp;#39;admin/&amp;#39;&lt;/span&gt;, admin&lt;span style="color:#f92672"&gt;.&lt;/span&gt;site&lt;span style="color:#f92672"&gt;.&lt;/span&gt;urls),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; path(&lt;span style="color:#e6db74"&gt;&amp;#39;blog/&amp;#39;&lt;/span&gt;, include(&lt;span style="color:#e6db74"&gt;&amp;#39;blog.urls&amp;#39;&lt;/span&gt;)),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; path(&lt;span style="color:#e6db74"&gt;&amp;#39;&amp;#39;&lt;/span&gt;, include(&lt;span style="color:#e6db74"&gt;&amp;#39;blog.urls&amp;#39;&lt;/span&gt;)), &lt;span style="color:#75715e"&gt;# 首页&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="django-应用app目录结构介绍"&gt;Django 应用（app）目录结构介绍&lt;/h2&gt;
+&lt;p&gt;以下是一个典型的 Django 应用目录结构：&lt;/p&gt;</description></item><item><title>Python Unittest 使用方法速查</title><link>https://iuwu98005.github.io/posts/250812-unittest/</link><pubDate>Tue, 12 Aug 2025 22:02:59 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250812-unittest/</guid><description>&lt;p&gt;首先将项目的目录结构调整为如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-PlainText" data-lang="PlainText"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;├── vector # 待测试的代码
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ ├── __init__.py
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ └── vector.py
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;├── tests # 测试文件夹
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ ├── __init__.py
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ └── test_vector.py
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;└── main.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="待测试代码vectorpy"&gt;待测试代码（vector.py）&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-Python" data-lang="Python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Vector&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;__init__&lt;/span&gt;(self, x, y):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; isinstance(x, (int, float)) &lt;span style="color:#f92672"&gt;and&lt;/span&gt; isinstance(y, (int, float)):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;x &lt;span style="color:#f92672"&gt;=&lt;/span&gt; x
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;y &lt;span style="color:#f92672"&gt;=&lt;/span&gt; y
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;raise&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;ValueError&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;x and y must be numbers&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;add&lt;/span&gt;(self, other):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; Vector(self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;x &lt;span style="color:#f92672"&gt;+&lt;/span&gt; other&lt;span style="color:#f92672"&gt;.&lt;/span&gt;x, self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;y &lt;span style="color:#f92672"&gt;+&lt;/span&gt; other&lt;span style="color:#f92672"&gt;.&lt;/span&gt;y)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="测试代码test_vectorpy"&gt;测试代码（test_vector.py）&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-Python" data-lang="Python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; unittest
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; sys
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; vector &lt;span style="color:#f92672"&gt;import&lt;/span&gt; Vector
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;TestVector&lt;/span&gt;(unittest&lt;span style="color:#f92672"&gt;.&lt;/span&gt;TestCase):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# 每次运行 unittest 的开始与结束打印信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;@classmethod&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;setUpClass&lt;/span&gt;(cls):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;start&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;@classmethod&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;tearDownClass&lt;/span&gt;(cls):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;end&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;test_init&lt;/span&gt;(self):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; v &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Vector(&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;assertEqual(v&lt;span style="color:#f92672"&gt;.&lt;/span&gt;x, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;assertEqual(v&lt;span style="color:#f92672"&gt;.&lt;/span&gt;y, &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# self.assertTrue(v.x == 0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# 测试 __init__ 的 raise error 是否正常工作&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;with&lt;/span&gt; self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;assertRaises(&lt;span style="color:#a6e22e"&gt;ValueError&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Vector(&lt;span style="color:#e6db74"&gt;&amp;#34;a&amp;#34;&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# 满足条件下跳过该测试，并提示 msg&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;@unittest.skipIf&lt;/span&gt;(sys&lt;span style="color:#f92672"&gt;.&lt;/span&gt;platform &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;win32&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;skip on windows&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;test_platform&lt;/span&gt;(self):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;assertEqual()&lt;/code&gt; 在不相等时，错误信息会给出 &lt;code&gt;v.x&lt;/code&gt; 的值， 方便定位问题。而 &lt;code&gt;assertTrue()&lt;/code&gt; 只会提示 &lt;code&gt;False != True&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>测试用例的设计</title><link>https://iuwu98005.github.io/posts/250812-test-case/</link><pubDate>Tue, 12 Aug 2025 12:29:49 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250812-test-case/</guid><description>&lt;h2 id="设计测试用例的方法"&gt;设计测试用例的方法&lt;/h2&gt;
+&lt;p&gt;设计测试用例的方法根据核心区别，分为从需求出发（黑盒测试），从代码出发（白盒测试）。&lt;/p&gt;
+&lt;h3 id="一黑盒测试用例设计方法"&gt;一、黑盒测试用例设计方法&lt;/h3&gt;
+&lt;p&gt;根据用户需求和功能出发，不关注代码实现，可分为以下几种方法。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;等价类划分
+&lt;ul&gt;
+&lt;li&gt;将输入分为有效类和无效等价类，各取一个代表值进行测试。&lt;/li&gt;
+&lt;li&gt;例：年龄输入框（18-60），有效类：18、24、60，无效类：&amp;lt;18，&amp;gt;60，非数字。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;边界值分析
+&lt;ul&gt;
+&lt;li&gt;测试输入边界以及其近邻值。&lt;/li&gt;
+&lt;li&gt;例：年龄输入框（18-60），边界值：18、60，近邻值：17、61。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;判定表法（Decison Table）
+&lt;ul&gt;
+&lt;li&gt;适用于多条件组合的场景，列出条件与结果的对应关系来生成用例。&lt;/li&gt;
+&lt;li&gt;例：登录功能中【用户名是否为空】【密码是否为空】-&amp;gt;【提示信息】&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;因果图法
+&lt;ul&gt;
+&lt;li&gt;用图形表示条件和结果的逻辑关系，然后转化为判定表。&lt;/li&gt;
+&lt;li&gt;常用于复杂业务的测试逻辑。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;场景法、流程法
+&lt;ul&gt;
+&lt;li&gt;按照用户的真实操作流程（场景）来设计测试用例，常结合业务用例图或流程图。&lt;/li&gt;
+&lt;li&gt;例：电商下单-支付-发货-确认收货。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;错误推测法
+&lt;ul&gt;
+&lt;li&gt;思路：根据经验推测出容易出错的地方。&lt;/li&gt;
+&lt;li&gt;例：超长字符，特殊符号，SQL注入，空格，重复提交。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="二白盒测试用例设计方法"&gt;二、白盒测试用例设计方法&lt;/h3&gt;
+&lt;p&gt;从代码结构出发，关注程序的执行路径。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;语句覆盖（Statement Coverage）
+&lt;ul&gt;
+&lt;li&gt;每个语句至少执行一次。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;判定覆盖、分支覆盖
+&lt;ul&gt;
+&lt;li&gt;每个分支（True/False）至少执行一次。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;条件覆盖
+&lt;ul&gt;
+&lt;li&gt;每个条件（True/False）至少执行一次。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;判定、条件覆盖
+&lt;ul&gt;
+&lt;li&gt;结合分支和条件的覆盖。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;路径覆盖
+&lt;ul&gt;
+&lt;li&gt;覆盖程序中所有可能的路径（核心逻辑模块）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="测试用例设计举例"&gt;测试用例设计举例&lt;/h3&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;</description></item><item><title>Python Asyncio</title><link>https://iuwu98005.github.io/posts/250627-python_asyncio/</link><pubDate>Fri, 08 Aug 2025 14:40:43 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250627-python_asyncio/</guid><description>&lt;h2 id="省流---使用方法"&gt;省流 - 使用方法&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-Python" data-lang="Python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; asyncio
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; time
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;async&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;say_after&lt;/span&gt;(delay: int, what: str):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; asyncio&lt;span style="color:#f92672"&gt;.&lt;/span&gt;sleep(delay)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;what&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt; - &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;delay&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;async&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;start at &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;time&lt;span style="color:#f92672"&gt;.&lt;/span&gt;strftime(&lt;span style="color:#e6db74"&gt;&amp;#39;&lt;/span&gt;&lt;span style="color:#e6db74"&gt;%X&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;&lt;/span&gt;)&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ret &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; asyncio&lt;span style="color:#f92672"&gt;.&lt;/span&gt;gather(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; say_after(&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; say_after(&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;world&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; )
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(ret)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;end at &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;time&lt;span style="color:#f92672"&gt;.&lt;/span&gt;strftime(&lt;span style="color:#e6db74"&gt;&amp;#39;&lt;/span&gt;&lt;span style="color:#e6db74"&gt;%X&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;&lt;/span&gt;)&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; __name__ &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; asyncio&lt;span style="color:#f92672"&gt;.&lt;/span&gt;run(main())
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="asynciogather-的并发机制"&gt;&lt;code&gt;asyncio.gather()&lt;/code&gt; 的并发机制&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;被 async 修饰的方法在被调用时，会创建一个协程对象，通过 &lt;code&gt;await&lt;/code&gt; 或者 &lt;code&gt;asyncio.gather&lt;/code&gt; 包装成 task 对象，并注册到 event loop 中。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;await &amp;lt;corotine&amp;gt;&lt;/code&gt; 和 &lt;code&gt;asyncio.gather&lt;/code&gt;， 会将 corotine 转换为 task， 并添加到 &lt;code&gt;event loop&lt;/code&gt; 中。 (async 修饰的函数， 会返回一个 corotine)&lt;/p&gt;</description></item><item><title>Git 学习记录</title><link>https://iuwu98005.github.io/posts/250703_gitflow/</link><pubDate>Fri, 04 Jul 2025 20:17:00 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250703_gitflow/</guid><description>&lt;h2 id="gitflow-是什么"&gt;GitFlow 是什么?&lt;/h2&gt;
+&lt;p&gt;GitFlow 简单来说, 就是使用 git 进行版本控制的一套规范.&lt;/p&gt;
+&lt;p&gt;根据 GitFlow 的建议, 主要的分支分为 &lt;code&gt;master&lt;/code&gt;, &lt;code&gt;hotfix&lt;/code&gt;, &lt;code&gt;dev&lt;/code&gt;, &lt;code&gt;release&lt;/code&gt; 和 &lt;code&gt;feat&lt;/code&gt; 这 5 种分支.&lt;/p&gt;
+&lt;p&gt;下图来自 &lt;code&gt;why-need-git-flow&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="alt text" loading="lazy" src="image.png"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;master&lt;/code&gt; : 主干分支, 用于正式发布的分支, 需要由专人严格审核测试后的 &lt;code&gt;release&lt;/code&gt; / &lt;code&gt;hotfix&lt;/code&gt; 分支才可以合并到该分支.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;hotfix&lt;/code&gt; : 用于热修复, 当 &lt;code&gt;master&lt;/code&gt; 出现紧急 bug 时, 就需要基于 &lt;code&gt;master&lt;/code&gt; 临时创建一个分支进行修复, 修复测试完成后, 合并到 &lt;code&gt;master&lt;/code&gt; 和 &lt;code&gt;dev&lt;/code&gt; 分支, 修复完成后删除 &lt;code&gt;hotfix&lt;/code&gt; 分支.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;dev&lt;/code&gt; : 开发分支, 在 &lt;code&gt;master&lt;/code&gt; 分支基础上创建而来, 是功能开发的基础分支. 一般不可在这条分支上直接开发, 需要新建一个 &lt;code&gt;feat&lt;/code&gt; 分支, 再进行开发.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;feat&lt;/code&gt;: 功能分支, 基于 &lt;code&gt;master&lt;/code&gt; 分支, 不同的开发人员负责不同的 &lt;code&gt;feat&lt;/code&gt; 分支, 开发测试完成后, 提交 &lt;code&gt;PR(Pull Request)&lt;/code&gt; 到 remote, 由专人审核, 审核通过后合并到 &lt;code&gt;dev&lt;/code&gt; 分支.&lt;/p&gt;</description></item><item><title>Pandas Tutorial</title><link>https://iuwu98005.github.io/posts/250702_pandas/</link><pubDate>Wed, 02 Jul 2025 16:56:44 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250702_pandas/</guid><description>&lt;h2 id="pandas的安装与导入"&gt;Pandas的安装与导入&lt;/h2&gt;
+&lt;p&gt;在终端输入以下指令安装 &lt;code&gt;pandas&lt;/code&gt; 库&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install pandas
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果是使用 &lt;code&gt;vscode&lt;/code&gt; 进行开发, 你可能需要额外安装 &lt;code&gt;openpyxl&lt;/code&gt; 库:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install openpyxl
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完成后在代码中导入:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; pandas &lt;span style="color:#66d9ef"&gt;as&lt;/span&gt; pd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="pandas-读取数据的方式"&gt;Pandas 读取数据的方式&lt;/h2&gt;
+&lt;p&gt;Pandas 主要通过以下三种方式从不同来源读取数据:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;pd.read_csv()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pd.read_excel()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pd.read_sql()&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="pandas-的数据类型"&gt;Pandas 的数据类型&lt;/h2&gt;
+&lt;p&gt;Pandas 的数据类型有 &lt;code&gt;DataFrame&lt;/code&gt; 和 &lt;code&gt;Series&lt;/code&gt;
 一般来说, 查询单行或者单列的数据, 返回的结果为 Series
-查询多行多列的数据, 返回的结果为 DataFrame&lt;/p>
-&lt;h2 id="pandas-查询数据的方式">Pandas 查询数据的方式&lt;/h2>
-&lt;p>Pandas 查询数据的 5 种方式: 1. &lt;code>df.loc&lt;/code> 2. &lt;code>df.iloc&lt;/code> 3. &lt;code>df.where&lt;/code> 4. &lt;code>df.query&lt;/code>.
-在这几种方法中, &lt;code>df.loc&lt;/code> 可以兼顾查询和覆写的功能, 具体使用方法如下:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>df &lt;span style="color:#f92672">=&lt;/span> pd&lt;span style="color:#f92672">.&lt;/span>read_csv(your_csv_path)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>df&lt;span style="color:#f92672">.&lt;/span>loc[:, &lt;span style="color:#e6db74">&amp;#34;[column1]&amp;#34;&lt;/span>] &lt;span style="color:#f92672">=&lt;/span> df[&lt;span style="color:#e6db74">&amp;#34;column1&amp;#34;&lt;/span>]&lt;span style="color:#f92672">.&lt;/span>str&lt;span style="color:#f92672">.&lt;/span>replace(&lt;span style="color:#e6db74">&amp;#34;origin_str_part&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;target_str_part&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>上面这段代码的效果是, 查询 column1 这一整列(&lt;code>:&lt;/code> 表示查询所有行), 同时将该行的 &lt;code>origin_str_part&lt;/code> 全部替换为 &lt;code>target_str_part&lt;/code>.&lt;/p></description></item><item><title>Python 多线程编程</title><link>https://iuwu98005.github.io/posts/250626-python-thread/</link><pubDate>Thu, 26 Jun 2025 14:36:07 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250626-python-thread/</guid><description>&lt;h2 id="基本概念">基本概念&lt;/h2>
-&lt;p>多任务中的并发和并行&lt;/p>
-&lt;ul>
-&lt;li>并发: 一段时间内交替执行任务&lt;/li>
-&lt;li>并行: 一段时间内同时执行多个任务&lt;/li>
-&lt;/ul>
-&lt;h2 id="进程">进程&lt;/h2>
-&lt;p>python 中可以通过多进程来实现多任务.&lt;/p>
-&lt;h3 id="进程的概念">进程的概念&lt;/h3>
-&lt;p>进程 (Process) 是操作系统资源分配和调度的基本单位.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># main.py&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">foo1&lt;/span>():&lt;span style="color:#f92672">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">foo2&lt;/span>():&lt;span style="color:#f92672">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo1()
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo2()
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在运行 &lt;code>.py&lt;/code> 文件时, 操作系统会创建一个进程, 依次运行 &lt;code>foo1&lt;/code> 和 &lt;code>foo2&lt;/code> 两个方法.&lt;/p>
-&lt;h3 id="多进程">多进程&lt;/h3>
-&lt;p>&lt;code>main.py&lt;/code> 运行后会创建一个进程, 此时如果再次创建一个进程, 即为子进程. 我们让主进程运行 &lt;code>foo1&lt;/code>, 让子进程来运行 &lt;code>foo2&lt;/code>即可提升代码运行的效率.&lt;/p>
-&lt;h3 id="进程的创建步骤">进程的创建步骤&lt;/h3>
-&lt;p>1.导入进程包&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> multiprocessing
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>2.创建进程对象&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>mp &lt;span style="color:#f92672">=&lt;/span> multiprocessing&lt;span style="color:#f92672">.&lt;/span>Process()
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>Process()&lt;/code> 方法主要有3个参数:&lt;/p>
-&lt;ul>
-&lt;li>target: 执行的目标函数名(方法名), 如 &lt;code>foo2&lt;/code>&lt;/li>
-&lt;li>name: 进程名, 一般不用设置&lt;/li>
-&lt;li>group: 进程组, 当前为 &lt;code>None&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>3.启动进程&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>mp&lt;span style="color:#f92672">.&lt;/span>start()
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="进程执行带有参数的任务">进程执行带有参数的任务&lt;/h3>
-&lt;ul>
-&lt;li>&lt;code>args&lt;/code> 以元组方式传参&lt;/li>
-&lt;li>&lt;code>kwargs&lt;/code> 以字典方式传参&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">foo1&lt;/span>(argument:int):&lt;span style="color:#f92672">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">foo2&lt;/span>(argument:int):&lt;span style="color:#f92672">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo1_process &lt;span style="color:#f92672">=&lt;/span> multiprocessing&lt;span style="color:#f92672">.&lt;/span>Process(target&lt;span style="color:#f92672">=&lt;/span>foo1, args&lt;span style="color:#f92672">=&lt;/span>(&lt;span style="color:#ae81ff">3&lt;/span>,))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo1_process&lt;span style="color:#f92672">.&lt;/span>start()
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo2_process &lt;span style="color:#f92672">=&lt;/span> multiprocessing&lt;span style="color:#f92672">.&lt;/span>Process(target&lt;span style="color:#f92672">=&lt;/span>foo2, kwargs&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#e6db74">&amp;#34;argument&amp;#34;&lt;/span>, &lt;span style="color:#ae81ff">3&lt;/span>})
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo2_process&lt;span style="color:#f92672">.&lt;/span>start()
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="获取进程编号">获取进程编号&lt;/h3>
-&lt;p>当程序进程数量越来越多时, 为了更好地对进程进行管理, 就需要知道每个进程的编号&lt;/p></description></item><item><title>在 Cherry Studio 配置本地 MCP 服务</title><link>https://iuwu98005.github.io/posts/250623-mcp/</link><pubDate>Mon, 23 Jun 2025 16:06:16 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250623-mcp/</guid><description>&lt;p>demo地址：&lt;a href="https://github.com/IUWU98005/mai-agent">https://github.com/IUWU98005/mai-agent&lt;/a>&lt;/p>
-&lt;h2 id="-简介">📌 简介&lt;/h2>
-&lt;p>本文档将指导你如何将自定义的 MCP 服务（如你在 main.py 中编写的基于 FastMCP 的服务）集成到 Cherry Studio 中，实现本地调试和调用。&lt;/p>
-&lt;p>Cherry Studio 是一个支持多种 Agent 和工具链插件的开发环境，而 MCP（Modular Command Protocol）是 Cherry Studio 与外部 AI 工具或脚本通信的主要协议。&lt;/p>
-&lt;h2 id="-环境要求">🛠️ 环境要求&lt;/h2>
-&lt;pre>&lt;code>- Python 3.10+
+查询多行多列的数据, 返回的结果为 DataFrame&lt;/p&gt;
+&lt;h2 id="pandas-查询数据的方式"&gt;Pandas 查询数据的方式&lt;/h2&gt;
+&lt;p&gt;Pandas 查询数据的 5 种方式: 1. &lt;code&gt;df.loc&lt;/code&gt; 2. &lt;code&gt;df.iloc&lt;/code&gt; 3. &lt;code&gt;df.where&lt;/code&gt; 4. &lt;code&gt;df.query&lt;/code&gt;.
+在这几种方法中, &lt;code&gt;df.loc&lt;/code&gt; 可以兼顾查询和覆写的功能, 具体使用方法如下:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df &lt;span style="color:#f92672"&gt;=&lt;/span&gt; pd&lt;span style="color:#f92672"&gt;.&lt;/span&gt;read_csv(your_csv_path)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#f92672"&gt;.&lt;/span&gt;loc[:, &lt;span style="color:#e6db74"&gt;&amp;#34;[column1]&amp;#34;&lt;/span&gt;] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; df[&lt;span style="color:#e6db74"&gt;&amp;#34;column1&amp;#34;&lt;/span&gt;]&lt;span style="color:#f92672"&gt;.&lt;/span&gt;str&lt;span style="color:#f92672"&gt;.&lt;/span&gt;replace(&lt;span style="color:#e6db74"&gt;&amp;#34;origin_str_part&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;target_str_part&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上面这段代码的效果是, 查询 column1 这一整列(&lt;code&gt;:&lt;/code&gt; 表示查询所有行), 同时将该行的 &lt;code&gt;origin_str_part&lt;/code&gt; 全部替换为 &lt;code&gt;target_str_part&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Python 多线程编程</title><link>https://iuwu98005.github.io/posts/250626-python-thread/</link><pubDate>Thu, 26 Jun 2025 14:36:07 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250626-python-thread/</guid><description>&lt;h2 id="基本概念"&gt;基本概念&lt;/h2&gt;
+&lt;p&gt;多任务中的并发和并行&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;并发: 一段时间内交替执行任务&lt;/li&gt;
+&lt;li&gt;并行: 一段时间内同时执行多个任务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="进程"&gt;进程&lt;/h2&gt;
+&lt;p&gt;python 中可以通过多进程来实现多任务.&lt;/p&gt;
+&lt;h3 id="进程的概念"&gt;进程的概念&lt;/h3&gt;
+&lt;p&gt;进程 (Process) 是操作系统资源分配和调度的基本单位.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# main.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;foo1&lt;/span&gt;():&lt;span style="color:#f92672"&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;foo2&lt;/span&gt;():&lt;span style="color:#f92672"&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;foo1()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;foo2()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在运行 &lt;code&gt;.py&lt;/code&gt; 文件时, 操作系统会创建一个进程, 依次运行 &lt;code&gt;foo1&lt;/code&gt; 和 &lt;code&gt;foo2&lt;/code&gt; 两个方法.&lt;/p&gt;
+&lt;h3 id="多进程"&gt;多进程&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;main.py&lt;/code&gt; 运行后会创建一个进程, 此时如果再次创建一个进程, 即为子进程. 我们让主进程运行 &lt;code&gt;foo1&lt;/code&gt;, 让子进程来运行 &lt;code&gt;foo2&lt;/code&gt;即可提升代码运行的效率.&lt;/p&gt;
+&lt;h3 id="进程的创建步骤"&gt;进程的创建步骤&lt;/h3&gt;
+&lt;p&gt;1.导入进程包&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; multiprocessing
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;2.创建进程对象&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mp &lt;span style="color:#f92672"&gt;=&lt;/span&gt; multiprocessing&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Process()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Process()&lt;/code&gt; 方法主要有3个参数:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;target: 执行的目标函数名(方法名), 如 &lt;code&gt;foo2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;name: 进程名, 一般不用设置&lt;/li&gt;
+&lt;li&gt;group: 进程组, 当前为 &lt;code&gt;None&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3.启动进程&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mp&lt;span style="color:#f92672"&gt;.&lt;/span&gt;start()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="进程执行带有参数的任务"&gt;进程执行带有参数的任务&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;args&lt;/code&gt; 以元组方式传参&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kwargs&lt;/code&gt; 以字典方式传参&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;foo1&lt;/span&gt;(argument:int):&lt;span style="color:#f92672"&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;foo2&lt;/span&gt;(argument:int):&lt;span style="color:#f92672"&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;foo1_process &lt;span style="color:#f92672"&gt;=&lt;/span&gt; multiprocessing&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Process(target&lt;span style="color:#f92672"&gt;=&lt;/span&gt;foo1, args&lt;span style="color:#f92672"&gt;=&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;,))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;foo1_process&lt;span style="color:#f92672"&gt;.&lt;/span&gt;start()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;foo2_process &lt;span style="color:#f92672"&gt;=&lt;/span&gt; multiprocessing&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Process(target&lt;span style="color:#f92672"&gt;=&lt;/span&gt;foo2, kwargs&lt;span style="color:#f92672"&gt;=&lt;/span&gt;{&lt;span style="color:#e6db74"&gt;&amp;#34;argument&amp;#34;&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;})
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;foo2_process&lt;span style="color:#f92672"&gt;.&lt;/span&gt;start()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="获取进程编号"&gt;获取进程编号&lt;/h3&gt;
+&lt;p&gt;当程序进程数量越来越多时, 为了更好地对进程进行管理, 就需要知道每个进程的编号&lt;/p&gt;</description></item><item><title>在 Cherry Studio 配置本地 MCP 服务</title><link>https://iuwu98005.github.io/posts/250623-mcp/</link><pubDate>Mon, 23 Jun 2025 16:06:16 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250623-mcp/</guid><description>&lt;p&gt;demo地址：&lt;a href="https://github.com/IUWU98005/mai-agent"&gt;https://github.com/IUWU98005/mai-agent&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="-简介"&gt;📌 简介&lt;/h2&gt;
+&lt;p&gt;本文档将指导你如何将自定义的 MCP 服务（如你在 main.py 中编写的基于 FastMCP 的服务）集成到 Cherry Studio 中，实现本地调试和调用。&lt;/p&gt;
+&lt;p&gt;Cherry Studio 是一个支持多种 Agent 和工具链插件的开发环境，而 MCP（Modular Command Protocol）是 Cherry Studio 与外部 AI 工具或脚本通信的主要协议。&lt;/p&gt;
+&lt;h2 id="-环境要求"&gt;🛠️ 环境要求&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;- Python 3.10+
 - 已安装 Cherry Studio
 - MCP 服务依赖：
 - pydantic_ai
 - fastmcp
 - dotenv
 - psutil、platform 等标准/常用库
-&lt;/code>&lt;/pre>
-&lt;h2 id="-项目结构">📁 项目结构&lt;/h2>
-&lt;p>确保你的项目大致如下所示：&lt;/p>
-&lt;pre>&lt;code>project_root/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="-项目结构"&gt;📁 项目结构&lt;/h2&gt;
+&lt;p&gt;确保你的项目大致如下所示：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;project_root/
 │
 ├── main.py # MCP 服务主程序
 ├── tools.py # 自定义工具函数
 ├── .env # 可选的环境变量文件
 └── cases/ # 供工具函数使用的目录
-&lt;/code>&lt;/pre>
-&lt;h2 id="mcp-服务核心代码mainpy">MCP 服务核心代码（main.py）&lt;/h2>
-&lt;pre>&lt;code>from pydantic_ai.agent import AgentRunResult
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="mcp-服务核心代码mainpy"&gt;MCP 服务核心代码（main.py）&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;from pydantic_ai.agent import AgentRunResult
 from pydantic_ai.models.gemini import GeminiModel
 from pydantic_ai import Agent
 from mcp.server.fastmcp import FastMCP
@@ -321,384 +321,384 @@ def main() -&amp;gt; None:
 mcp.run(transport=&amp;quot;stdio&amp;quot;)
 if __name__ == &amp;quot;__main__&amp;quot;:
 main()
-&lt;/code>&lt;/pre>
-&lt;h2 id="通过-json-配置文件添加-mcp-服务器">通过 json 配置文件添加 MCP 服务器&lt;/h2>
-&lt;p>在 CherryStudio 添加 MCP 服务器, 并选择 &lt;code>从 Json 导入&lt;/code>, 配置 json 文件:&lt;/p></description></item><item><title>构建简单的 AI Agent 实战教程</title><link>https://iuwu98005.github.io/posts/250613-ai-agent/</link><pubDate>Fri, 13 Jun 2025 18:13:59 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250613-ai-agent/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
-&lt;p>本项目展示如何使用 Python 构建一个简单的文件系统助手程序。该助手可以理解用户的文本输入，调用指定工具函数操作文件，并通过 Gemini 模型进行任务处理。&lt;/p>
-&lt;p>demo地址：&lt;a href="https://github.com/IUWU98005/mai-agent">https://github.com/IUWU98005/mai-agent&lt;/a>&lt;/p>
-&lt;h2 id="项目结构">项目结构&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>.
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── __init__.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── main.py &lt;span style="color:#75715e"># 程序入口&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── tools.py &lt;span style="color:#75715e"># 工具函数模块&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>└── cases/ &lt;span style="color:#75715e"># 示例文件目录&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ├── a.go
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ├── b.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ├── c.java
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> └── d.c
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="环境准备">环境准备&lt;/h2>
-&lt;p>安装依赖：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install pydantic-ai python-dotenv
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>配置环境变量：在 &lt;code>.env&lt;/code> 文件中添加 Gemini API 密钥：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">GEMINI_API_KEY&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">your_api_key_here&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="关键模块说明">关键模块说明&lt;/h2>
-&lt;ol>
-&lt;li>
-&lt;p>工具函数（tools.py）&lt;/p>
-&lt;p>定义了程序可用的基础文件操作：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># filepath: tools.py&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">read_file&lt;/span>(name: str) &lt;span style="color:#f92672">-&amp;gt;&lt;/span> str:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;读取指定文件的内容&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">list_files&lt;/span>() &lt;span style="color:#f92672">-&amp;gt;&lt;/span> list[str]:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;列出目录中的所有文件&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">rename_file&lt;/span>(cur_name: str, new_name: str) &lt;span style="color:#f92672">-&amp;gt;&lt;/span> str:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;重命名文件&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>助手初始化（main.py）&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> pydantic_ai.agent &lt;span style="color:#f92672">import&lt;/span> Agent
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> pydantic_ai.models.gemini &lt;span style="color:#f92672">import&lt;/span> GeminiModel
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> tools
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 初始化模型&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>model &lt;span style="color:#f92672">=&lt;/span> GeminiModel(&lt;span style="color:#e6db74">&amp;#34;gemini-2.0-flash&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 创建助手实例&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>agent &lt;span style="color:#f92672">=&lt;/span> Agent(
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> model&lt;span style="color:#f92672">=&lt;/span>model,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> system_prompt&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;You are an experienced programmer.&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> tools&lt;span style="color:#f92672">=&lt;/span>[tools&lt;span style="color:#f92672">.&lt;/span>read_file, tools&lt;span style="color:#f92672">.&lt;/span>list_files, tools&lt;span style="color:#f92672">.&lt;/span>rename_file],
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>主程序逻辑&lt;/p></description></item><item><title>Nginx</title><link>https://iuwu98005.github.io/posts/250611-nginx/</link><pubDate>Wed, 11 Jun 2025 17:55:03 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250611-nginx/</guid><description>&lt;h2 id="1-nginx的安装与运行">1. Nginx的安装与运行&lt;/h2>
-&lt;h3 id="1-启动nginx">1. 启动Nginx&lt;/h3>
-&lt;p>切换到nginx目录下:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>cd C:&lt;span style="color:#ae81ff">\n&lt;/span>ginx
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>启动nginx:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>start nginx
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="2-验证nginx是否运行">2. 验证Nginx是否运行&lt;/h3>
-&lt;p>在浏览器访问&lt;code>localhost:8080&lt;/code>，会出现Nginx的欢迎页面。&lt;/p>
-&lt;h3 id="3-配置nginx">3. 配置Nginx&lt;/h3>
-&lt;ul>
-&lt;li>配置文件通常位于&lt;code>conf&lt;/code>目录下，名为&lt;code>nginx.conf&lt;/code>&lt;/li>
-&lt;li>可以通过配置文件设置端口、添加虚拟主机等&lt;/li>
-&lt;/ul>
-&lt;h3 id="4-重启以应用更改">4. 重启以应用更改&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>nginx -s reload
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="5-停止nginx">5. 停止Nginx&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>nginx -s stop
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>请注意, 如果你的系统防火墙开启, 可能需要在防火墙设置中允许nginx使用的端口(默认是80和443).&lt;/p>
-&lt;h2 id="2-nginx的基本命令">2. Nginx的基本命令&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>nginx -s stop &lt;span style="color:#75715e"># 关闭 nginx, 可能不保存相关信息, 迅速终止web服务.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nginx -s quit &lt;span style="color:#75715e"># 关闭 nginx, 保存相关信息, 有安排的结束web服务.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nginx -s reload &lt;span style="color:#75715e"># 改变 nginx 相关配置后, 重载 nginx 以应用配置更改.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nginx -s reopen &lt;span style="color:#75715e"># 重新打开日志文件.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nginx -c filename &lt;span style="color:#75715e"># 为 nginx 指定一个配置文件, 用以代替缺省的.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nginx -t &lt;span style="color:#75715e"># 不运行, 仅测试配置文件. nginx 将检查配置文件语法的正确性.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nginx -v &lt;span style="color:#75715e"># 显示 nginx 的版本.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nginx -V &lt;span style="color:#75715e"># 显示 nginx 的版本, 编译器版本和配置参数&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Archlinux 快捷键</title><link>https://iuwu98005.github.io/posts/250611-archlinux-keybind/</link><pubDate>Wed, 11 Jun 2025 17:50:06 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250611-archlinux-keybind/</guid><description>&lt;p>项目地址: &lt;a href="https://github.com/Liu-WeiHu/hyprdots/tree/current">https://github.com/Liu-WeiHu/hyprdots/tree/current&lt;/a>&lt;/p>
-&lt;h2 id="keybindings">Keybindings&lt;/h2>
-&lt;p>&amp;ldquo;&amp;ldquo;&amp;ldquo;html&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align: left">Keys&lt;/th>
-&lt;th style="text-align: left">Action&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Q&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->F4&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Close focused window&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Del&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Kill Hyprland session&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->W&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Toggle the window between focus and float&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->G&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Toggle the window between focus and group&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Enter&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Toggle the window between focus and fullscreen&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->L&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch lock screen&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->F&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Toggle pin on focused window&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Backspace&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch logout menu&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Esc&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Toggle waybar&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->T&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch terminal emulator (kitty)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->E&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch file manager (dolphin)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->C&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch text editor (vscode)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->F&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch web browser (firefox)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Esc&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch system monitor (htop/btop or fallback to top)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->A&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch application launcher (rofi)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Tab&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch window switcher (rofi)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->E&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch file explorer (rofi)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->F10&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Toggle audio mute&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->F11&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Decrease volume&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->F12&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Increase volume&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->P&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Partial screenshot capture&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->P&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Partial screenshot capture (frozen screen)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->P&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Monitor screenshot capture&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->PrtScn&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">All monitors screenshot capture&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->G&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Disable hypr effects for gamemode&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->→&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->←&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Cycle wallpaper&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->↑&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↓&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Cycle waybar mode&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->R&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch wallbash mode select menu (rofi)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->T&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch theme select menu (rofi)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->A&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch style select menu (rofi)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->W&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch wallpaper select menu (rofi)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->V&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Launch clipboard (rofi)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->K&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Switch keyboard layout&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->←&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->→&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↑&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↓&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Move window focus&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Tab&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Change window focus&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->[0-9]&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Switch workspaces&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->←&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->→&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Switch workspaces to a relative workspace&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->↓&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Move to the first empty workspace&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->←&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->→&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↑&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↓&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Resize windows&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->[0-9]&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Move focused window to a relative workspace&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->←&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->→&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↑&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->↓&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Move focused window around the current workspace&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->MouseScroll&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Scroll through existing workspaces&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->LeftClick&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Z&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Move focused window&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->RightClick&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->X&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Resize focused window&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->S&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Move/Switch to special workspace (scratchpad)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->S&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Toggle to special workspace&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->J&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Toggle focused window split&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Alt&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->[0-9]&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Move focused window to a workspace silently&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->H&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Move between grouped windows backward&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">&lt;!-- raw HTML omitted -->Super&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->L&lt;!-- raw HTML omitted -->&lt;/td>
-&lt;td style="text-align: left">Move between grouped windows forward&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;!-- raw HTML omitted -->
-&lt;p>&amp;quot;&amp;rdquo;&amp;rdquo;&lt;/p></description></item><item><title>Archlinux 日常检查</title><link>https://iuwu98005.github.io/posts/250611-archlinux-dailycheck/</link><pubDate>Wed, 11 Jun 2025 17:43:32 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250611-archlinux-dailycheck/</guid><description>&lt;h3 id="1更新系统核心任务">&lt;strong>1、更新系统（核心任务）&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Syu &lt;span style="color:#75715e"># 同步仓库并升级所有软件包&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="2清理软件包缓存节省磁盘空间">&lt;strong>2、清理软件包缓存（节省磁盘空间）&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Sc &lt;span style="color:#75715e"># 删除已卸载软件的旧版本缓存&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pacman -Scc &lt;span style="color:#75715e"># 清空所有缓存（谨慎使用，可能导致无法降级软件）&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>替代工具：&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>paccache -r &lt;span style="color:#75715e"># 使用 `pacman-contrib` 中的工具保留最近3个版本&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="3-检查系统日志排查潜在问题">&lt;strong>3. 检查系统日志（排查潜在问题）&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>journalctl -p &lt;span style="color:#ae81ff">3&lt;/span> -xb &lt;span style="color:#75715e"># 查看优先级为 ERROR 及以上的日志&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>journalctl --disk-usage &lt;span style="color:#75715e"># 检查日志占用的磁盘空间&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="4-备份重要数据防止意外丢失">&lt;strong>4. 备份重要数据（防止意外丢失）&lt;/strong>&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>手动备份&lt;/strong>：&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rsync -avh --progress /path/to/source /path/to/backup
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>自动备份&lt;/strong>：&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>timeshift&lt;/code>（系统快照）&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>borgbackup&lt;/code>（去重加密备份&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="5-检查磁盘健康">&lt;strong>5. 检查磁盘健康&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo smartctl -a /dev/sda &lt;span style="color:#75715e"># 查看硬盘SMART状态（需安装 `smartmontools`）&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo df -h &lt;span style="color:#75715e"># 查看磁盘空间使用情况&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo du -sh ~/Downloads &lt;span style="color:#75715e"># 检查指定目录占用空间&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="6-监控系统资源">&lt;strong>6. 监控系统资源&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>htop &lt;span style="color:#75715e"># 实时查看CPU、内存、进程状态（需安装 `htop`）&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nvtop &lt;span style="color:#75715e"># 监控NVIDIA GPU状态（需安装 `nvtop`）&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>iotop &lt;span style="color:#75715e"># 查看磁盘I/O使用情况（需安装 `iotop`）&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="7-检查安全性与异常登录">&lt;strong>7. 检查安全性与异常登录&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>last -a &lt;span style="color:#75715e"># 查看最近登录记录&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo netstat -tulpn | grep LISTEN &lt;span style="color:#75715e"># 检查开放端口&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo fail2ban-client status &lt;span style="color:#75715e"># 查看入侵防护状态（需安装 `fail2ban`）&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="8-维护配置文件">&lt;strong>8. 维护配置文件&lt;/strong>&lt;/h3>
-&lt;ul>
-&lt;li>清理用户历史文件：&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rm ~/.bash_history &lt;span style="color:#75715e"># 慎用！建议使用 `history -c` 仅清理内存中的记录&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>删除临时文件：&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rm -rf ~/.cache/* &lt;span style="color:#75715e"># 清理用户缓存&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;h3 id="注意事项">&lt;strong>注意事项&lt;/strong>&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>滚动更新的风险&lt;/strong>：Arch Linux 是滚动发行版，每日更新可能导致依赖冲突，建议：&lt;/p></description></item><item><title>Hugo + GitHub Pages 自动部署博客指南</title><link>https://iuwu98005.github.io/posts/250611-hugo/</link><pubDate>Wed, 11 Jun 2025 10:15:07 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250611-hugo/</guid><description>&lt;h2 id="-环境准备">📦 环境准备&lt;/h2>
-&lt;p>确保本地安装了以下工具：&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://gohugo.io/getting-started/installing/">Hugo&lt;/a>（建议安装 Hugo extended 版本）&lt;/li>
-&lt;li>Git&lt;/li>
-&lt;li>GitHub 账号&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h2 id="-第一步创建-hugo-博客项目">🏗️ 第一步：创建 Hugo 博客项目&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo new site hugo-blog
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd hugo-blog
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>添加一个主题（推荐 PaperMod）：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git submodule add &amp;lt;https://github.com/adityatelange/hugo-PaperMod&amp;gt; themes/PaperMod
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>修改 hugo.toml 启用主题：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>theme &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;PaperMod&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="-第二步配置站点基本信息">📝 第二步：配置站点基本信息&lt;/h2>
-&lt;p>hugo.toml 示例配置（兼容 Hugo v0.128+）：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>baseURL &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;https://&amp;lt;your-username&amp;gt;.github.io/&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>title &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;My Awesome Blog&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>languageCode &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;en-us&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>theme &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;PaperMod&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">[&lt;/span>pagination&lt;span style="color:#f92672">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pagerSize &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">10&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">[&lt;/span>params&lt;span style="color:#f92672">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> defaultTheme &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;auto&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ShowReadingTime &lt;span style="color:#f92672">=&lt;/span> true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ShowCodeCopyButtons &lt;span style="color:#f92672">=&lt;/span> true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ShowShareButtons &lt;span style="color:#f92672">=&lt;/span> false
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="-第三步创建文章">📄 第三步：创建文章&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo new posts/hello-world.md
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>编辑文章文件并将 draft: true 改为 false。&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="通过-json-配置文件添加-mcp-服务器"&gt;通过 json 配置文件添加 MCP 服务器&lt;/h2&gt;
+&lt;p&gt;在 CherryStudio 添加 MCP 服务器, 并选择 &lt;code&gt;从 Json 导入&lt;/code&gt;, 配置 json 文件:&lt;/p&gt;</description></item><item><title>构建简单的 AI Agent 实战教程</title><link>https://iuwu98005.github.io/posts/250613-ai-agent/</link><pubDate>Fri, 13 Jun 2025 18:13:59 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250613-ai-agent/</guid><description>&lt;h2 id="简介"&gt;简介&lt;/h2&gt;
+&lt;p&gt;本项目展示如何使用 Python 构建一个简单的文件系统助手程序。该助手可以理解用户的文本输入，调用指定工具函数操作文件，并通过 Gemini 模型进行任务处理。&lt;/p&gt;
+&lt;p&gt;demo地址：&lt;a href="https://github.com/IUWU98005/mai-agent"&gt;https://github.com/IUWU98005/mai-agent&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="项目结构"&gt;项目结构&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;├── __init__.py
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;├── main.py &lt;span style="color:#75715e"&gt;# 程序入口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;├── tools.py &lt;span style="color:#75715e"&gt;# 工具函数模块&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;└── cases/ &lt;span style="color:#75715e"&gt;# 示例文件目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ├── a.go
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ├── b.py
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ├── c.java
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; └── d.c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="环境准备"&gt;环境准备&lt;/h2&gt;
+&lt;p&gt;安装依赖：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install pydantic-ai python-dotenv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置环境变量：在 &lt;code&gt;.env&lt;/code&gt; 文件中添加 Gemini API 密钥：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ini" data-lang="ini"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;GEMINI_API_KEY&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;your_api_key_here&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="关键模块说明"&gt;关键模块说明&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;工具函数（tools.py）&lt;/p&gt;
+&lt;p&gt;定义了程序可用的基础文件操作：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# filepath: tools.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;read_file&lt;/span&gt;(name: str) &lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt; str:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;&amp;#34;&amp;#34;读取指定文件的内容&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;list_files&lt;/span&gt;() &lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt; list[str]:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;&amp;#34;&amp;#34;列出目录中的所有文件&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;rename_file&lt;/span&gt;(cur_name: str, new_name: str) &lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt; str:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;&amp;#34;&amp;#34;重命名文件&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;助手初始化（main.py）&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; pydantic_ai.agent &lt;span style="color:#f92672"&gt;import&lt;/span&gt; Agent
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; pydantic_ai.models.gemini &lt;span style="color:#f92672"&gt;import&lt;/span&gt; GeminiModel
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; tools
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 初始化模型&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;model &lt;span style="color:#f92672"&gt;=&lt;/span&gt; GeminiModel(&lt;span style="color:#e6db74"&gt;&amp;#34;gemini-2.0-flash&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 创建助手实例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;agent &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Agent(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; model&lt;span style="color:#f92672"&gt;=&lt;/span&gt;model,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; system_prompt&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;You are an experienced programmer.&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; tools&lt;span style="color:#f92672"&gt;=&lt;/span&gt;[tools&lt;span style="color:#f92672"&gt;.&lt;/span&gt;read_file, tools&lt;span style="color:#f92672"&gt;.&lt;/span&gt;list_files, tools&lt;span style="color:#f92672"&gt;.&lt;/span&gt;rename_file],
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;主程序逻辑&lt;/p&gt;</description></item><item><title>Nginx</title><link>https://iuwu98005.github.io/posts/250611-nginx/</link><pubDate>Wed, 11 Jun 2025 17:55:03 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250611-nginx/</guid><description>&lt;h2 id="1-nginx的安装与运行"&gt;1. Nginx的安装与运行&lt;/h2&gt;
+&lt;h3 id="1-启动nginx"&gt;1. 启动Nginx&lt;/h3&gt;
+&lt;p&gt;切换到nginx目录下:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd C:&lt;span style="color:#ae81ff"&gt;\n&lt;/span&gt;ginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;启动nginx:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;start nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="2-验证nginx是否运行"&gt;2. 验证Nginx是否运行&lt;/h3&gt;
+&lt;p&gt;在浏览器访问&lt;code&gt;localhost:8080&lt;/code&gt;，会出现Nginx的欢迎页面。&lt;/p&gt;
+&lt;h3 id="3-配置nginx"&gt;3. 配置Nginx&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;配置文件通常位于&lt;code&gt;conf&lt;/code&gt;目录下，名为&lt;code&gt;nginx.conf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;可以通过配置文件设置端口、添加虚拟主机等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4-重启以应用更改"&gt;4. 重启以应用更改&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nginx -s reload
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="5-停止nginx"&gt;5. 停止Nginx&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nginx -s stop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;请注意, 如果你的系统防火墙开启, 可能需要在防火墙设置中允许nginx使用的端口(默认是80和443).&lt;/p&gt;
+&lt;h2 id="2-nginx的基本命令"&gt;2. Nginx的基本命令&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nginx -s stop &lt;span style="color:#75715e"&gt;# 关闭 nginx, 可能不保存相关信息, 迅速终止web服务.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nginx -s quit &lt;span style="color:#75715e"&gt;# 关闭 nginx, 保存相关信息, 有安排的结束web服务.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nginx -s reload &lt;span style="color:#75715e"&gt;# 改变 nginx 相关配置后, 重载 nginx 以应用配置更改.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nginx -s reopen &lt;span style="color:#75715e"&gt;# 重新打开日志文件.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nginx -c filename &lt;span style="color:#75715e"&gt;# 为 nginx 指定一个配置文件, 用以代替缺省的.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nginx -t &lt;span style="color:#75715e"&gt;# 不运行, 仅测试配置文件. nginx 将检查配置文件语法的正确性.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nginx -v &lt;span style="color:#75715e"&gt;# 显示 nginx 的版本.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nginx -V &lt;span style="color:#75715e"&gt;# 显示 nginx 的版本, 编译器版本和配置参数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Archlinux 快捷键</title><link>https://iuwu98005.github.io/posts/250611-archlinux-keybind/</link><pubDate>Wed, 11 Jun 2025 17:50:06 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250611-archlinux-keybind/</guid><description>&lt;p&gt;项目地址: &lt;a href="https://github.com/Liu-WeiHu/hyprdots/tree/current"&gt;https://github.com/Liu-WeiHu/hyprdots/tree/current&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="keybindings"&gt;Keybindings&lt;/h2&gt;
+&lt;p&gt;&amp;ldquo;&amp;ldquo;&amp;ldquo;html&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: left"&gt;Keys&lt;/th&gt;
+&lt;th style="text-align: left"&gt;Action&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Q&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Alt&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;F4&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Close focused window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Del&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Kill Hyprland session&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;W&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Toggle the window between focus and float&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;G&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Toggle the window between focus and group&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Alt&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Enter&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Toggle the window between focus and fullscreen&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;L&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch lock screen&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Shift&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;F&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Toggle pin on focused window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Backspace&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch logout menu&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Ctrl&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Esc&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Toggle waybar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;T&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch terminal emulator (kitty)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;E&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch file manager (dolphin)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;C&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch text editor (vscode)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;F&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch web browser (firefox)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Ctrl&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Shift&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Esc&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch system monitor (htop/btop or fallback to top)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;A&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch application launcher (rofi)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Tab&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch window switcher (rofi)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Shift&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;E&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch file explorer (rofi)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;F10&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Toggle audio mute&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;F11&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Decrease volume&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;F12&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Increase volume&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;P&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Partial screenshot capture&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Ctrl&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;P&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Partial screenshot capture (frozen screen)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Alt&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;P&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Monitor screenshot capture&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;PrtScn&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;All monitors screenshot capture&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Alt&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;G&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Disable hypr effects for gamemode&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Alt&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;→&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;←&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Cycle wallpaper&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Alt&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;↑&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;↓&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Cycle waybar mode&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Shift&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;R&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch wallbash mode select menu (rofi)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Shift&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;T&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch theme select menu (rofi)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Shift&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;A&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch style select menu (rofi)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Shift&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;W&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch wallpaper select menu (rofi)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;V&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Launch clipboard (rofi)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;K&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Switch keyboard layout&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;←&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;→&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;↑&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;↓&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Move window focus&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Alt&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Tab&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Change window focus&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;[0-9]&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Switch workspaces&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Ctrl&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;←&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;→&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Switch workspaces to a relative workspace&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Ctrl&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;↓&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Move to the first empty workspace&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Shift&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;←&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;→&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;↑&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;↓&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Resize windows&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Shift&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;[0-9]&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Move focused window to a relative workspace&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Shift&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Ctrl&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;←&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;→&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;↑&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;↓&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Move focused window around the current workspace&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;MouseScroll&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Scroll through existing workspaces&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;LeftClick&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Z&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Move focused window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;RightClick&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;X&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Resize focused window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Alt&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;S&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Move/Switch to special workspace (scratchpad)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;S&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Toggle to special workspace&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;J&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Toggle focused window split&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Alt&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;[0-9]&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Move focused window to a workspace silently&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Ctrl&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;H&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Move between grouped windows backward&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;!-- raw HTML omitted --&gt;Super&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Ctrl&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;L&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Move between grouped windows forward&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&amp;quot;&amp;rdquo;&amp;rdquo;&lt;/p&gt;</description></item><item><title>Archlinux 日常检查</title><link>https://iuwu98005.github.io/posts/250611-archlinux-dailycheck/</link><pubDate>Wed, 11 Jun 2025 17:43:32 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250611-archlinux-dailycheck/</guid><description>&lt;h3 id="1更新系统核心任务"&gt;&lt;strong&gt;1、更新系统（核心任务）&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo pacman -Syu &lt;span style="color:#75715e"&gt;# 同步仓库并升级所有软件包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="2清理软件包缓存节省磁盘空间"&gt;&lt;strong&gt;2、清理软件包缓存（节省磁盘空间）&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo pacman -Sc &lt;span style="color:#75715e"&gt;# 删除已卸载软件的旧版本缓存&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo pacman -Scc &lt;span style="color:#75715e"&gt;# 清空所有缓存（谨慎使用，可能导致无法降级软件）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;替代工具：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;paccache -r &lt;span style="color:#75715e"&gt;# 使用 `pacman-contrib` 中的工具保留最近3个版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="3-检查系统日志排查潜在问题"&gt;&lt;strong&gt;3. 检查系统日志（排查潜在问题）&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;journalctl -p &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt; -xb &lt;span style="color:#75715e"&gt;# 查看优先级为 ERROR 及以上的日志&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;journalctl --disk-usage &lt;span style="color:#75715e"&gt;# 检查日志占用的磁盘空间&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="4-备份重要数据防止意外丢失"&gt;&lt;strong&gt;4. 备份重要数据（防止意外丢失）&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;手动备份&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rsync -avh --progress /path/to/source /path/to/backup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;自动备份&lt;/strong&gt;：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;timeshift&lt;/code&gt;（系统快照）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;borgbackup&lt;/code&gt;（去重加密备份&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="5-检查磁盘健康"&gt;&lt;strong&gt;5. 检查磁盘健康&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo smartctl -a /dev/sda &lt;span style="color:#75715e"&gt;# 查看硬盘SMART状态（需安装 `smartmontools`）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo df -h &lt;span style="color:#75715e"&gt;# 查看磁盘空间使用情况&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo du -sh ~/Downloads &lt;span style="color:#75715e"&gt;# 检查指定目录占用空间&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="6-监控系统资源"&gt;&lt;strong&gt;6. 监控系统资源&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;htop &lt;span style="color:#75715e"&gt;# 实时查看CPU、内存、进程状态（需安装 `htop`）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nvtop &lt;span style="color:#75715e"&gt;# 监控NVIDIA GPU状态（需安装 `nvtop`）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;iotop &lt;span style="color:#75715e"&gt;# 查看磁盘I/O使用情况（需安装 `iotop`）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="7-检查安全性与异常登录"&gt;&lt;strong&gt;7. 检查安全性与异常登录&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;last -a &lt;span style="color:#75715e"&gt;# 查看最近登录记录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo netstat -tulpn | grep LISTEN &lt;span style="color:#75715e"&gt;# 检查开放端口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo fail2ban-client status &lt;span style="color:#75715e"&gt;# 查看入侵防护状态（需安装 `fail2ban`）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="8-维护配置文件"&gt;&lt;strong&gt;8. 维护配置文件&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;清理用户历史文件：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rm ~/.bash_history &lt;span style="color:#75715e"&gt;# 慎用！建议使用 `history -c` 仅清理内存中的记录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;删除临时文件：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rm -rf ~/.cache/* &lt;span style="color:#75715e"&gt;# 清理用户缓存&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="注意事项"&gt;&lt;strong&gt;注意事项&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;滚动更新的风险&lt;/strong&gt;：Arch Linux 是滚动发行版，每日更新可能导致依赖冲突，建议：&lt;/p&gt;</description></item><item><title>Hugo + GitHub Pages 自动部署博客指南</title><link>https://iuwu98005.github.io/posts/250611-hugo/</link><pubDate>Wed, 11 Jun 2025 10:15:07 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250611-hugo/</guid><description>&lt;h2 id="-环境准备"&gt;📦 环境准备&lt;/h2&gt;
+&lt;p&gt;确保本地安装了以下工具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gohugo.io/getting-started/installing/"&gt;Hugo&lt;/a&gt;（建议安装 Hugo extended 版本）&lt;/li&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;li&gt;GitHub 账号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-第一步创建-hugo-博客项目"&gt;🏗️ 第一步：创建 Hugo 博客项目&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;hugo new site hugo-blog
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd hugo-blog
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加一个主题（推荐 PaperMod）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git submodule add &amp;lt;https://github.com/adityatelange/hugo-PaperMod&amp;gt; themes/PaperMod
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;修改 hugo.toml 启用主题：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;theme &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;PaperMod&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="-第二步配置站点基本信息"&gt;📝 第二步：配置站点基本信息&lt;/h2&gt;
+&lt;p&gt;hugo.toml 示例配置（兼容 Hugo v0.128+）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;baseURL &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;https://&amp;lt;your-username&amp;gt;.github.io/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;title &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;My Awesome Blog&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;languageCode &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;en-us&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;theme &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;PaperMod&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;[&lt;/span&gt;pagination&lt;span style="color:#f92672"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pagerSize &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;[&lt;/span&gt;params&lt;span style="color:#f92672"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; defaultTheme &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;auto&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ShowReadingTime &lt;span style="color:#f92672"&gt;=&lt;/span&gt; true
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ShowCodeCopyButtons &lt;span style="color:#f92672"&gt;=&lt;/span&gt; true
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ShowShareButtons &lt;span style="color:#f92672"&gt;=&lt;/span&gt; false
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="-第三步创建文章"&gt;📄 第三步：创建文章&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;hugo new posts/hello-world.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;编辑文章文件并将 draft: true 改为 false。&lt;/p&gt;</description></item></channel></rss>
