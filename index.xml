@@ -24,19 +24,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -v /var/run/docker.sock:/var/run/docker.sock &lt;span style="color:#ae81ff"&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;&lt;/span&gt; jenkinsci/blueocean
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="jenkins-发布任务"&gt;Jenkins 发布任务&lt;/h2&gt;
-&lt;p&gt;Jenkins 发布任务既可以通过在 Web 页面点击触发，也可以通过远程 API 触发。&lt;/p&gt;</description></item><item><title>Python 基础（9.6更新）</title><link>https://iuwu98005.github.io/posts/250902-python-base/</link><pubDate>Tue, 02 Sep 2025 06:57:02 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250902-python-base/</guid><description>&lt;h2 id="classmethod-和-staticmethod"&gt;&lt;code&gt;@classmethod&lt;/code&gt; 和 &lt;code&gt;@staticmethod&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Jenkins 发布任务既可以通过在 Web 页面点击触发，也可以通过远程 API 触发。&lt;/p&gt;</description></item><item><title>Python 基础（9.7更新）</title><link>https://iuwu98005.github.io/posts/250902-python-base/</link><pubDate>Tue, 02 Sep 2025 06:57:02 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250902-python-base/</guid><description>&lt;h2 id="python-builtin"&gt;Python builtin&lt;/h2&gt;
+&lt;h3 id="classmethod-和-staticmethod"&gt;&lt;code&gt;@classmethod&lt;/code&gt; 和 &lt;code&gt;@staticmethod&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;@classmethod&lt;/code&gt; 和 &lt;code&gt;@staticmethod&lt;/code&gt; 是 Python 自带(builtin) 的两个装饰器&lt;/p&gt;
 &lt;p&gt;classmethod 和 staticmethod 都可以通过 object 调用和 class 调用， 也就是:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;通过对象调用，&lt;code&gt;A().f(1)&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;通过类调用，&lt;code&gt;A.f(1)&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id="staticmethod"&gt;&lt;code&gt;@staticmethod&lt;/code&gt;&lt;/h3&gt;
+&lt;h4 id="staticmethod"&gt;&lt;code&gt;@staticmethod&lt;/code&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;staticmethod&lt;/code&gt; 就是普通函数放到 Class 的命名空间下，但不用传入 &lt;code&gt;self&lt;/code&gt; 参数。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;提供更好的封装，将功能绑定在类上，而不是仅仅是在类的对象上。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id="classmethod"&gt;&lt;code&gt;@classmethod&lt;/code&gt;&lt;/h3&gt;
+&lt;h4 id="classmethod"&gt;&lt;code&gt;@classmethod&lt;/code&gt;&lt;/h4&gt;
 &lt;p&gt;对比普通类中的方法，&lt;code&gt;classmethod&lt;/code&gt; 的第一个 arg 为 &lt;code&gt;cls&lt;/code&gt;，而不是 &lt;code&gt;self&lt;/code&gt;。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Person1&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
