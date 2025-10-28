@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Blog</title><link>https://iuwu98005.github.io/</link><description>Recent content on My Blog</description><generator>Hugo -- 0.150.0</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Tue, 16 Sep 2025 23:04:34 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>记录 Clash Verge Rev 使用过程中遇到的问题及解决方案(25.09.23更新)</title><link>https://iuwu98005.github.io/posts/250916-clash-verge-rev/</link><pubDate>Tue, 16 Sep 2025 23:04:34 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250916-clash-verge-rev/</guid><description>&lt;h2 id="tun-模式-steam-下载游戏导致代理服务器流量消耗异常"&gt;TUN 模式 Steam 下载游戏，导致代理服务器流量消耗异常&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Blog</title><link>https://iuwu98005.github.io/</link><description>Recent content on My Blog</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Tue, 28 Oct 2025 14:34:35 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>251028 Classmethod</title><link>https://iuwu98005.github.io/posts/251028-classmethod/</link><pubDate>Tue, 28 Oct 2025 14:34:35 +0800</pubDate><guid>https://iuwu98005.github.io/posts/251028-classmethod/</guid><description>&lt;h3 id="简单介绍"&gt;简单介绍&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;@classmethod&lt;/code&gt; 是与类绑定, 而不是实例的方法. 它的第一个参数是 &lt;code&gt;cls&lt;/code&gt; &amp;ndash; 代表当前类对象.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实例方法: 需要创建对象才能使用&lt;/li&gt;
+&lt;li&gt;类方法: 可以直接通过类调用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Example&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;@classmethod&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;print_class&lt;/span&gt;(cls):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;this method belongs to class &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;cls&lt;span style="color:#f92672"&gt;.&lt;/span&gt;__name__&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-Python" data-lang="Python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Example&lt;span style="color:#f92672"&gt;.&lt;/span&gt;print_class()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 输出: this method belongs to class Example&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;cls&lt;/code&gt; 为类方法中的第一个参数, 意味着类方法可以访问和修改类级别的数据, 而不是实例级别的数据.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-Python" data-lang="Python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Counter&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; count &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;__init__&lt;/span&gt;(self):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Counter&lt;span style="color:#f92672"&gt;.&lt;/span&gt;count &lt;span style="color:#f92672"&gt;+=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;@classmethod&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;print_count&lt;/span&gt;(cls):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(cls&lt;span style="color:#f92672"&gt;.&lt;/span&gt;count)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-Python" data-lang="Python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;a &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Counter()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;b &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Counter()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Counter&lt;span style="color:#f92672"&gt;.&lt;/span&gt;print_count()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 输出: 2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;实例方法可以通过 &lt;code&gt;self.&amp;lt;attr&amp;gt;&lt;/code&gt; 来访问类属性, 类方法可以通过 &lt;code&gt;cls.&amp;lt;attr&amp;gt;&lt;/code&gt; 来访问.&lt;/li&gt;
+&lt;li&gt;在外部可以通过 &lt;code&gt;&amp;lt;Class&amp;gt;.&amp;lt;attr&amp;gt;&lt;/code&gt; 来访问类属性.&lt;/li&gt;
+&lt;li&gt;类方法可以直接调用 &lt;code&gt;cls.&amp;lt;attr&amp;gt;&lt;/code&gt; 来对类属性进行修改, 实例方法则需要通过 &lt;code&gt;self.__class__.&amp;lt;attr&amp;gt;&lt;/code&gt; 来进行修改.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="classmethod-存在的意义"&gt;classmethod 存在的意义&lt;/h3&gt;
+&lt;p&gt;既然实例方法已经可以访问和修改类属性, 为什么还需要实例方法 &lt;code&gt;@classmethod&lt;/code&gt;&lt;/p&gt;</description></item><item><title>记录 Clash Verge Rev 使用过程中遇到的问题及解决方案(25.09.23更新)</title><link>https://iuwu98005.github.io/posts/250916-clash-verge-rev/</link><pubDate>Tue, 16 Sep 2025 23:04:34 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250916-clash-verge-rev/</guid><description>&lt;h2 id="tun-模式-steam-下载游戏导致代理服务器流量消耗异常"&gt;TUN 模式 Steam 下载游戏，导致代理服务器流量消耗异常&lt;/h2&gt;
 &lt;p&gt;首先，在 TUN 模式下，所有的流量（包括 Steam 和其他应用的数据）都会被代理，包括下载更新、游戏数据等。这意味着即使你不通过 Steam 直接下载，其他流量也会被转发，增加流量消耗。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;解决方案:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;在 Clash 的 &lt;code&gt;Profiles - Global Extend Script&lt;/code&gt; 在规则配置中添加以下内容：&lt;/p&gt;
@@ -29,7 +60,8 @@
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-Javascript" data-lang="Javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;DOMAIN,st.dl.eccdnx.com,DIRECT&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="已经配置规则-gitlab-采用直连direct-实际仍无法进行-git-操作"&gt;已经配置规则 gitlab 采用直连(DIRECT), 实际仍无法进行 git 操作&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;已经配置：&amp;ldquo;DOMAIN-SUFFIX,gitlab.devops.[name].com,DIRECT&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;已经配置：&amp;ldquo;DOMAIN-SUFFIX,gitlab.devops.[name].com,DIRECT&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;问题根源在于 TUN 模式下的 DNS 劫持和 &lt;code&gt;Fake IP&lt;/code&gt; 机制&lt;/p&gt;</description></item><item><title>Jenkins 学习记录</title><link>https://iuwu98005.github.io/posts/250903-jenkins/</link><pubDate>Wed, 03 Sep 2025 19:31:15 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250903-jenkins/</guid><description>&lt;h2 id="jenkins-基本介绍"&gt;Jenkins 基本介绍&lt;/h2&gt;
 &lt;p&gt;Jenkins 是自动发布部署软件的系统，提供 Web 页面供用户进行管理。在 Web 页面，用户可以进行编排自动发布任务、下载、编译代码和执行远程命令等操作。&lt;/p&gt;
 &lt;h3 id="jenkins-插件plugins"&gt;Jenkins 插件（Plugins）&lt;/h3&gt;
@@ -283,7 +315,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; asyncio&lt;span style="color:#f92672"&gt;.&lt;/span&gt;run(main())
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="asynciogather-的并发机制"&gt;&lt;code&gt;asyncio.gather()&lt;/code&gt; 的并发机制&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;被 async 修饰的方法在被调用时，会创建一个协程对象，通过 &lt;code&gt;await&lt;/code&gt; 或者 &lt;code&gt;asyncio.gather&lt;/code&gt; 包装成 task 对象，并注册到 event loop 中。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;被 async 修饰的方法在被调用时，会创建一个协程对象，通过 &lt;code&gt;await&lt;/code&gt; 或者 &lt;code&gt;asyncio.gather&lt;/code&gt; 包装成 task 对象，并注册到 event loop 中。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;await &amp;lt;corotine&amp;gt;&lt;/code&gt; 和 &lt;code&gt;asyncio.gather&lt;/code&gt;， 会将 corotine 转换为 task， 并添加到 &lt;code&gt;event loop&lt;/code&gt; 中。 (async 修饰的函数， 会返回一个 corotine)&lt;/p&gt;</description></item><item><title>Git 学习记录</title><link>https://iuwu98005.github.io/posts/250703_gitflow/</link><pubDate>Fri, 04 Jul 2025 20:17:00 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250703_gitflow/</guid><description>&lt;h2 id="gitflow-是什么"&gt;GitFlow 是什么?&lt;/h2&gt;
 &lt;p&gt;GitFlow 简单来说, 就是使用 git 进行版本控制的一套规范.&lt;/p&gt;
 &lt;p&gt;根据 GitFlow 的建议, 主要的分支分为 &lt;code&gt;master&lt;/code&gt;, &lt;code&gt;hotfix&lt;/code&gt;, &lt;code&gt;dev&lt;/code&gt;, &lt;code&gt;release&lt;/code&gt; 和 &lt;code&gt;feat&lt;/code&gt; 这 5 种分支.&lt;/p&gt;
