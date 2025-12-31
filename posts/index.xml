@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Blog</title><link>https://iuwu98005.github.io/posts/</link><description>Recent content in Posts on My Blog</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Tue, 28 Oct 2025 14:34:35 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>@classmethod 简介与实践应用（251104更新）</title><link>https://iuwu98005.github.io/posts/251028-classmethod/</link><pubDate>Tue, 28 Oct 2025 14:34:35 +0800</pubDate><guid>https://iuwu98005.github.io/posts/251028-classmethod/</guid><description>&lt;h3 id="简单介绍"&gt;简单介绍&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Blog</title><link>https://iuwu98005.github.io/posts/</link><description>Recent content in Posts on My Blog</description><generator>Hugo -- 0.153.5</generator><language>en-us</language><copyright>2025 IUWU98005</copyright><lastBuildDate>Wed, 31 Dec 2025 10:29:14 +0800</lastBuildDate><atom:link href="https://iuwu98005.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>解决中区 Apple Music 曲库较少的问题</title><link>https://iuwu98005.github.io/posts/251231-applemusic/</link><pubDate>Wed, 31 Dec 2025 10:29:14 +0800</pubDate><guid>https://iuwu98005.github.io/posts/251231-applemusic/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;yt-dlp -x --audio-format m4a --audio-quality &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; --embed-thumbnail --add-metadata &lt;span style="color:#e6db74"&gt;&amp;#34;视频URL&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;遇到喜欢的音乐时，可以使用 &lt;code&gt;yt-dlp&lt;/code&gt; 工具下载视频 URL 中的音乐。上述命令会提取音频并保存为高质量的 m4a 格式，同时嵌入封面和元数据。&lt;/p&gt;
+&lt;p&gt;在 Apple Music 中打开该文件，一键导入个人资料库即可。&lt;/p&gt;</description></item><item><title>@classmethod 简介与实践应用（251104更新）</title><link>https://iuwu98005.github.io/posts/251028-classmethod/</link><pubDate>Tue, 28 Oct 2025 14:34:35 +0800</pubDate><guid>https://iuwu98005.github.io/posts/251028-classmethod/</guid><description>&lt;h3 id="简单介绍"&gt;简单介绍&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;@classmethod&lt;/code&gt; 是与类绑定, 而不是实例的方法. 它的第一个参数是 &lt;code&gt;cls&lt;/code&gt; &amp;ndash; 代表当前类对象.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;实例方法: 需要创建对象才能使用&lt;/li&gt;
@@ -40,8 +42,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置完成后，你的规则配置应该类似于下图（部分）：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-Javascript" data-lang="Javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;CustomizationRule&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; [
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//&amp;#34;DOMAIN-SUFFIX,jetbrains.ai,US-手动选择&amp;#34;,
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//&amp;#34;DOMAIN-SUFFIX,jetbrains.ai,ChatGPT&amp;#34;,
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;DOMAIN-SUFFIX,jetbrains.ai,节点选择&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//&amp;#34;DOMAIN-SUFFIX,jetbrains.ai,ChatGPT&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;DOMAIN-SUFFIX,jetbrains.ai,节点选择&amp;#34;&lt;/span&gt;,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;PROCESS-NAME,tailscaled,DIRECT&amp;#34;&lt;/span&gt;,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;PROCESS-NAME,tailscaled.exe,DIRECT&amp;#34;&lt;/span&gt;,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;DOMAIN-SUFFIX,mcdn.bilivideo.com,REJECT&amp;#34;&lt;/span&gt;,
@@ -52,7 +54,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;DOMAIN-SUFFIX,steamserver.net,DIRECT&amp;#34;&lt;/span&gt;,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;DOMAIN-SUFFIX,steamcontent.com,DIRECT&amp;#34;&lt;/span&gt;,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 配置 Chatgpt 使用美国（或其他没有被ban）的节点
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;DOMAIN-SUFFIX,chatgpt.com,ChatGPT&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;DOMAIN-SUFFIX,chatgpt.com,ChatGPT&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;];
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;解决方案 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;如果还不能解决，则可以切换到 Clash 的 Connections 页面，同时开始下载游戏，找到流量使用最多的域名(Downloaded 降序排列)，如&lt;code&gt;st.dl.eccdnx.com:80&lt;/code&gt;.&lt;/p&gt;
@@ -79,14 +81,14 @@
 &lt;li&gt;下载 &lt;code&gt;jenkinsci/blueocean&lt;/code&gt; 镜像并使用以下 docker run 命令将其作为 Docker 中的容器运行:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker run &lt;span style="color:#ae81ff"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;&lt;/span&gt; -u root &lt;span style="color:#ae81ff"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;&lt;/span&gt; --rm &lt;span style="color:#ae81ff"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;&lt;/span&gt; -d &lt;span style="color:#ae81ff"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;&lt;/span&gt; -p 8080:8080 &lt;span style="color:#ae81ff"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;&lt;/span&gt; -p 50000:50000 &lt;span style="color:#ae81ff"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;&lt;/span&gt; -v jenkins-data:/var/jenkins_home &lt;span style="color:#ae81ff"&gt;\ &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -u root &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; --rm &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -d &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -p 8080:8080 &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -p 50000:50000 &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -v jenkins-data:/var/jenkins_home &lt;span style="color:#ae81ff"&gt;\ &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -v /var/run/docker.sock:/var/run/docker.sock &lt;span style="color:#ae81ff"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;&lt;/span&gt; jenkinsci/blueocean
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; jenkinsci/blueocean
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="jenkins-发布任务"&gt;Jenkins 发布任务&lt;/h2&gt;
 &lt;p&gt;Jenkins 发布任务既可以通过在 Web 页面点击触发，也可以通过远程 API 触发。&lt;/p&gt;</description></item><item><title>Python 基础（9.7更新）</title><link>https://iuwu98005.github.io/posts/250902-python-base/</link><pubDate>Tue, 02 Sep 2025 06:57:02 +0800</pubDate><guid>https://iuwu98005.github.io/posts/250902-python-base/</guid><description>&lt;h2 id="python-builtin"&gt;Python builtin&lt;/h2&gt;
 &lt;h3 id="classmethod-和-staticmethod"&gt;&lt;code&gt;@classmethod&lt;/code&gt; 和 &lt;code&gt;@staticmethod&lt;/code&gt;&lt;/h3&gt;
